@@ -1,6 +1,20 @@
+
+f_copy = 18px gotham light
+
+f_h1 = 40px neutraface thin
+
+// colors
+c = {}
+for key, value in data.colors
+  c[key] = convert(value)
+
 .guide
   padding 50px 0 0 0 
   background-color: c.white1
+  > .title
+    font f_h1
+    padding 0 0 0 50px
+    text-transform uppercase
 
   > .sections
     padding 20px
@@ -21,4 +35,14 @@
               border: 1px solid c.black1
               color: c.black1
  
+      > .font
+        padding 10px 20px
+        margin 5px
+        background-color: c.white1
+        white-space nowrap
+        overflow-x scroll
+        &.font_f_copy
+          font f_copy
+        &.font_f_h1
+          font f_h1
 
