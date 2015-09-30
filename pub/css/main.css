@@ -1,0 +1,90 @@
+.clear {
+  zoom: 1;
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.guide {
+  padding: 50px 0 0 0;
+  background-color: #f7eeea;
+}
+.guide > .sections {
+  padding: 20px;
+}
+.guide > .sections > .section {
+  width: 33%;
+  float: left;
+}
+.guide > .sections > .section > .color {
+  padding: 10px 20px;
+  margin: 5px;
+}
+.guide > .sections > .section > .color.color_black1 {
+  background-color: #000;
+  border: 1px solid #f7eeea;
+  color: #f7eeea;
+}
+.guide > .sections > .section > .color.color_white1 {
+  background-color: #f7eeea;
+  border: 1px solid #000;
+  color: #000;
+}
+.guide > .sections > .section > .color.color_red1 {
+  background-color: #ee697a;
+  border: 1px solid #000;
+  color: #000;
+}
+.guide > .sections > .section > .color.color_blue1 {
+  background-color: #d1e0eb;
+  border: 1px solid #000;
+  color: #000;
+}
+.guide > .sections > .section > .color.color_gold1 {
+  background-color: #b0976d;
+  border: 1px solid #000;
+  color: #000;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: ;
+  color: #000;
+  font: 16px Helvetica;
+}
+.container {
+  background-color: ;
+}
+.top {
+  background-color: #f7eeea;
+}
+.top > .inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+.top > .inner > .logo {
+  float: left;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: ;
+  margin: 0 0 0 20px;
+}
+.top > .inner > .divider {
+  float: left;
+  width: 1px;
+  height: 40px;
+  background-color: ;
+  margin: 0 30px;
+}
+.top > .inner > .title {
+  float: left;
+  font: 32px Impact;
+  color: #d1e0eb;
+}

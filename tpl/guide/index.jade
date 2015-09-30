@@ -1,0 +1,16 @@
+
+extends ../inc/layout
+
+block content
+  .guide
+    .title Gold PR style guide
+
+    .sections
+      .section.colors
+        .title Colors
+        each color, name in data.colors
+          .color(class='color_'+name) #{name} (#{color})
+      .section.fonts
+        .title Fonts
+
+      .clear

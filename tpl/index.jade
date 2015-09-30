@@ -1,0 +1,10 @@
+extends inc/layout
+
+block content
+  .container
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('./jst/index.js', 'Index');
+      //Global.i()
+    }
