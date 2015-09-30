@@ -158,6 +158,31 @@ body {
   color: #000;
   font: 18px gotham light;
 }
-.container {
-  background-color: ;
+.soon {
+  background-color: #d1e0eb;
+  height: 100%;
+}
+.soon > .border {
+  margin: 40px;
+  padding: 80px;
+  border: 5px solid #f7eeea;
+}
+.soon > .border > .box > .left {
+  float: left;
+  width: 50%;
+  background-color: #f7eeea;
+}
+.soon > .border > .box > .left > .icon {
+  width: 125px;
+  height: 125px;
+}
+.soon > .border > .box > .left > .icon > svg {
+  width: inherit;
+  height: inherit;
+}
+.soon > .border > .box > .right {
+  float: right;
+  width: 50%;
+  background-color: #ee697a;
+  color: #f7eeea;
 }
