@@ -3,7 +3,7 @@
   background-color: #f7eeea;
 }
 .guide > .title {
-  font: 40px neutraface thin;
+  font: 40px neutratext bold;
   padding: 0 0 0 50px;
   text-transform: uppercase;
 }
@@ -51,92 +51,167 @@
   overflow-x: scroll;
 }
 .guide > .sections > .section > .font.font_f_copy {
-  font: 18px gotham light;
+  font: 20px gotham book;
+}
+.guide > .sections > .section > .font.font_f_copy2 {
+  font: 30px gotham book;
 }
 .guide > .sections > .section > .font.font_f_h1 {
-  font: 40px neutraface thin;
+  font: 40px neutratext bold;
 }
 @font-face {
   font-family: gotham blaq;
-  src: url("fnt/gotham/blaq.otf") format('opentype');
+  src: url("fnt/gotham/blaq.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham bold;
-  src: url("fnt/gotham/bold.otf") format('opentype');
+  src: url("fnt/gotham/bold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham book;
-  src: url("fnt/gotham/book.otf") format('opentype');
+  src: url("fnt/gotham/book.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham light;
-  src: url("fnt/gotham/light.otf") format('opentype');
+  src: url("fnt/gotham/light.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham medium;
-  src: url("fnt/gotham/medium.otf") format('opentype');
+  src: url("fnt/gotham/medium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham thin;
-  src: url("fnt/gotham/thin.otf") format('opentype');
+  src: url("fnt/gotham/thin.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham ultra;
-  src: url("fnt/gotham/ultra.otf") format('opentype');
+  src: url("fnt/gotham/ultra.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: gotham xlight;
-  src: url("fnt/gotham/xlight.otf") format('opentype');
+  src: url("fnt/gotham/xlight.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface bold;
-  src: url("fnt/neutraface/bold.ttf") format('truetype');
+  font-family: neutradisplay bold;
+  src: url("fnt/neutradisplay/bold.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface inline;
-  src: url("fnt/neutraface/inline.ttf") format('truetype');
+  font-family: neutradisplay boldalt;
+  src: url("fnt/neutradisplay/boldalt.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface light;
-  src: url("fnt/neutraface/light.ttf") format('truetype');
+  font-family: neutradisplay light;
+  src: url("fnt/neutradisplay/light.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface medium;
-  src: url("fnt/neutraface/medium.ttf") format('truetype');
+  font-family: neutradisplay lightalt;
+  src: url("fnt/neutradisplay/lightalt.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface thin;
-  src: url("fnt/neutraface/thin.ttf") format('truetype');
+  font-family: neutradisplay medium;
+  src: url("fnt/neutradisplay/medium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: neutraface titling;
-  src: url("fnt/neutraface/titling.ttf") format('truetype');
+  font-family: neutradisplay mediumalt;
+  src: url("fnt/neutradisplay/mediumalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutradisplay thin;
+  src: url("fnt/neutradisplay/thin.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutradisplay thinalt;
+  src: url("fnt/neutradisplay/thinalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutradisplay titling;
+  src: url("fnt/neutradisplay/titling.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext bold;
+  src: url("fnt/neutratext/bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext boldalt;
+  src: url("fnt/neutratext/boldalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext light;
+  src: url("fnt/neutratext/light.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext lightalt;
+  src: url("fnt/neutratext/lightalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext medium;
+  src: url("fnt/neutratext/medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext mediumalt;
+  src: url("fnt/neutratext/mediumalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext thin;
+  src: url("fnt/neutratext/thin.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext thinalt;
+  src: url("fnt/neutratext/thinalt.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: neutratext titling;
+  src: url("fnt/neutratext/titling.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -156,7 +231,7 @@ body {
   padding: 0;
   background-color: #f7eeea;
   color: #000;
-  font: 18px gotham light;
+  font: 20px gotham book;
 }
 .soon {
   background-color: #d1e0eb;
