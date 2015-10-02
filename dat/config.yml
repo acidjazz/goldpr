@@ -2,7 +2,7 @@
 index: true
 meta: 
   title: "Gold PR"
-  description: "sample metadata description"
+  description: "We help companies grow"
   image: '/img/g.png' 
 sections: 
   - "guide"
