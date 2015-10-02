@@ -2,23 +2,74 @@
   background-color: c.blue1
   height 100%
   > .border
-    margin 40px
-    padding 80px
+    padding 60px
     border: 5px solid c.white1
+    max-width 900px
+    margin 40px auto
     > .box
+      > .sector
+        width 50%
+        height 400px
       > .left
         float left
-        width 50%
         background-color: c.white1
-        > .icon
-          width 125px
-          height 125px
+        > .logo
+          width 100%
+          margin 20% 0 0 0
           > svg
             width inherit
             height inherit
       > .right
         float right
-        width 50%
         background-color: c.red1
         color: c.white1
+        text-align center
+        > .detail
+          width 250px
+          margin auto
+          padding 20% 0 0 0 
+          > .title
+            font f_h1
+            border-bottom: 1px solid c.white1
+            padding 0 0 10px 0
+          > .copy
+            padding 10px 0 20px 0
+            line-height 20px
+          > .button
+            cursor pointer
+            padding 15px 20px
+            border: 1px solid c.white1
+            display inline-block
+            transition background-color 0.1s linear, color 0.1s linear 0.05s
+            color: c.white1
+            text-decoration none
+            &:hover
+              background-color: c.white1
+              color: c.red1
+          > .socials
+            padding 20px 0 0 0
+            > .social
+              display inline-block
+              width 30px
+              height 30px
+              padding 0 10px
+              > svg
+                width inherit
+                height inherit
+                > path, > g > path, > g > g > path
+                  fill: c.white1
 
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .soon
+    > .border
+      > .box
+        > .sector
+          float none
+          width 100%
+          &.left
+            > .logo
+              margin 0 0 0 0
+          &.right
+            > .detail
+              padding 10% 0 0 0
+                  

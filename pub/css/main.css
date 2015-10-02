@@ -51,10 +51,10 @@
   overflow-x: scroll;
 }
 .guide > .sections > .section > .font.font_f_copy {
-  font: 20px gotham book;
+  font: 16px gotham book;
 }
 .guide > .sections > .section > .font.font_f_copy2 {
-  font: 30px gotham book;
+  font: 20px gotham book;
 }
 .guide > .sections > .section > .font.font_f_h1 {
   font: 40px neutratext bold;
@@ -231,33 +231,98 @@ body {
   padding: 0;
   background-color: #f7eeea;
   color: #000;
-  font: 20px gotham book;
+  font: 16px gotham book;
 }
 .soon {
   background-color: #d1e0eb;
   height: 100%;
 }
 .soon > .border {
-  margin: 40px;
-  padding: 80px;
+  padding: 60px;
   border: 5px solid #f7eeea;
+  max-width: 900px;
+  margin: 40px auto;
+}
+.soon > .border > .box > .sector {
+  width: 50%;
+  height: 400px;
 }
 .soon > .border > .box > .left {
   float: left;
-  width: 50%;
   background-color: #f7eeea;
 }
-.soon > .border > .box > .left > .icon {
-  width: 125px;
-  height: 125px;
+.soon > .border > .box > .left > .logo {
+  width: 100%;
+  margin: 20% 0 0 0;
 }
-.soon > .border > .box > .left > .icon > svg {
+.soon > .border > .box > .left > .logo > svg {
   width: inherit;
   height: inherit;
 }
 .soon > .border > .box > .right {
   float: right;
-  width: 50%;
   background-color: #ee697a;
   color: #f7eeea;
+  text-align: center;
+}
+.soon > .border > .box > .right > .detail {
+  width: 250px;
+  margin: auto;
+  padding: 20% 0 0 0;
+}
+.soon > .border > .box > .right > .detail > .title {
+  font: 40px neutratext bold;
+  border-bottom: 1px solid #f7eeea;
+  padding: 0 0 10px 0;
+}
+.soon > .border > .box > .right > .detail > .copy {
+  padding: 10px 0 20px 0;
+  line-height: 20px;
+}
+.soon > .border > .box > .right > .detail > .button {
+  cursor: pointer;
+  padding: 15px 20px;
+  border: 1px solid #f7eeea;
+  display: inline-block;
+  -webkit-transition: background-color 0.1s linear, color 0.1s linear 0.05s;
+  -moz-transition: background-color 0.1s linear, color 0.1s linear 0.05s;
+  -o-transition: background-color 0.1s linear, color 0.1s linear 0.05s;
+  -ms-transition: background-color 0.1s linear, color 0.1s linear 0.05s;
+  transition: background-color 0.1s linear, color 0.1s linear 0.05s;
+  color: #f7eeea;
+  text-decoration: none;
+}
+.soon > .border > .box > .right > .detail > .button:hover {
+  background-color: #f7eeea;
+  color: #ee697a;
+}
+.soon > .border > .box > .right > .detail > .socials {
+  padding: 20px 0 0 0;
+}
+.soon > .border > .box > .right > .detail > .socials > .social {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 0 10px;
+}
+.soon > .border > .box > .right > .detail > .socials > .social > svg {
+  width: inherit;
+  height: inherit;
+}
+.soon > .border > .box > .right > .detail > .socials > .social > svg > path,
+.soon > .border > .box > .right > .detail > .socials > .social > svg > g > path,
+.soon > .border > .box > .right > .detail > .socials > .social > svg > g > g > path {
+  fill: #f7eeea;
+}
+@media all and (min-width: 1px) and (max-width: 1000px) {
+  .soon > .border > .box > .sector {
+    float: none;
+    width: 100%;
+  }
+  .soon > .border > .box > .sector.left > .logo {
+    margin: 0 0 0 0;
+  }
+  .soon > .border > .box > .sector.right > .detail {
+    padding: 10% 0 0 0;
+  }
 }
