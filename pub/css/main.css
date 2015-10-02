@@ -268,7 +268,7 @@ body {
 .soon > .border > .box > .right > .detail {
   width: 250px;
   margin: auto;
-  padding: 20% 0 0 0;
+  padding: 15% 0 0 0;
 }
 .soon > .border > .box > .right > .detail > .title {
   font: 40px neutratext bold;
@@ -332,9 +332,18 @@ body {
   fill: #f7eeea;
 }
 @media all and (min-width: 1px) and (max-width: 1000px) {
+  .soon {
+    padding: 10px;
+  }
+  .soon > .border {
+    padding: 10px;
+    margin: 10px auto;
+  }
   .soon > .border > .box > .sector {
     float: none;
     width: 100%;
+    height: auto;
+    padding: 10px 0;
   }
   .soon > .border > .box > .sector.left > .logo {
     margin: 0 0 0 0;
