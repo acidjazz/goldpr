@@ -303,7 +303,24 @@ body {
   display: inline-block;
   width: 30px;
   height: 30px;
-  padding: 0 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-transition: background-color 0.1s linear, fill 0.1s linear 0.05s;
+  -moz-transition: background-color 0.1s linear, fill 0.1s linear 0.05s;
+  -o-transition: background-color 0.1s linear, fill 0.1s linear 0.05s;
+  -ms-transition: background-color 0.1s linear, fill 0.1s linear 0.05s;
+  transition: background-color 0.1s linear, fill 0.1s linear 0.05s;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.soon > .border > .box > .right > .detail > .socials > .social:hover {
+  background-color: #f7eeea;
+}
+.soon > .border > .box > .right > .detail > .socials > .social:hover > svg > path,
+.soon > .border > .box > .right > .detail > .socials > .social:hover > svg > g > path,
+.soon > .border > .box > .right > .detail > .socials > .social:hover > svg > g > g > path {
+  fill: #ee697a;
 }
 .soon > .border > .box > .right > .detail > .socials > .social > svg {
   width: inherit;

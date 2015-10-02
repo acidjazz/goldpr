@@ -52,7 +52,17 @@
               display inline-block
               width 30px
               height 30px
-              padding 0 10px
+              margin 0 5px
+              cursor pointer
+              padding 5px
+              transition background-color 0.1s linear, fill 0.1s linear 0.05s
+              border-radius 3px
+              &:hover
+                background-color: c.white1
+                > svg
+                  > path, > g > path, > g > g > path
+                    fill: c.red1
+
               > svg
                 width inherit
                 height inherit
