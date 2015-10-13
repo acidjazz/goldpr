@@ -19,6 +19,8 @@
           > svg
             width inherit
             height inherit
+            #blueCircle
+              animation growBlue 0.5s ease-in 0s 
       > .right
         float right
         background-color: c.red1
@@ -32,9 +34,11 @@
             font f_h1
             border-bottom: 1px solid c.white1
             padding 0 0 10px 0
+            animation cellInX 0.2s linear 0s
           > .copy
             padding 10px 0 20px 0
             line-height 20px
+            animation cellInX 0.2s linear 0.1s
           > .button
             cursor pointer
             padding 15px 20px
@@ -88,3 +92,21 @@
             > .detail
               padding 10% 0 0 0
                   
+
+@keyframes growBlue
+  from
+    transform scale(0.5) translate(40%, 50%)
+    opacity 0
+  to
+    transform scale(1) translate(0%, 0%)
+    opacity 1
+
+
+@keyframes cellInX
+  from
+    transform translate(10px, 0)
+    opacity 0
+  to
+    transform translate(0, 0)
+    opacity 1
+

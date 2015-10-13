@@ -259,6 +259,13 @@ body {
   width: inherit;
   height: inherit;
 }
+.soon > .border > .box > .left > .logo > svg #blueCircle {
+  -webkit-animation: growBlue 0.5s ease-in 0s;
+  -moz-animation: growBlue 0.5s ease-in 0s;
+  -o-animation: growBlue 0.5s ease-in 0s;
+  -ms-animation: growBlue 0.5s ease-in 0s;
+  animation: growBlue 0.5s ease-in 0s;
+}
 .soon > .border > .box > .right {
   float: right;
   background-color: #ee697a;
@@ -274,10 +281,20 @@ body {
   font: 40px neutratext bold;
   border-bottom: 1px solid #f7eeea;
   padding: 0 0 10px 0;
+  -webkit-animation: cellInX 0.2s linear 0s;
+  -moz-animation: cellInX 0.2s linear 0s;
+  -o-animation: cellInX 0.2s linear 0s;
+  -ms-animation: cellInX 0.2s linear 0s;
+  animation: cellInX 0.2s linear 0s;
 }
 .soon > .border > .box > .right > .detail > .copy {
   padding: 10px 0 20px 0;
   line-height: 20px;
+  -webkit-animation: cellInX 0.2s linear 0.1s;
+  -moz-animation: cellInX 0.2s linear 0.1s;
+  -o-animation: cellInX 0.2s linear 0.1s;
+  -ms-animation: cellInX 0.2s linear 0.1s;
+  animation: cellInX 0.2s linear 0.1s;
 }
 .soon > .border > .box > .right > .detail > .button {
   cursor: pointer;
@@ -350,5 +367,181 @@ body {
   }
   .soon > .border > .box > .sector.right > .detail {
     padding: 10% 0 0 0;
+  }
+}
+@-moz-keyframes growBlue {
+  from {
+    -webkit-transform: scale(0.5) translate(40%, 50%);
+    -moz-transform: scale(0.5) translate(40%, 50%);
+    -o-transform: scale(0.5) translate(40%, 50%);
+    -ms-transform: scale(0.5) translate(40%, 50%);
+    transform: scale(0.5) translate(40%, 50%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0%, 0%);
+    -moz-transform: scale(1) translate(0%, 0%);
+    -o-transform: scale(1) translate(0%, 0%);
+    -ms-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes growBlue {
+  from {
+    -webkit-transform: scale(0.5) translate(40%, 50%);
+    -moz-transform: scale(0.5) translate(40%, 50%);
+    -o-transform: scale(0.5) translate(40%, 50%);
+    -ms-transform: scale(0.5) translate(40%, 50%);
+    transform: scale(0.5) translate(40%, 50%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0%, 0%);
+    -moz-transform: scale(1) translate(0%, 0%);
+    -o-transform: scale(1) translate(0%, 0%);
+    -ms-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-o-keyframes growBlue {
+  from {
+    -webkit-transform: scale(0.5) translate(40%, 50%);
+    -moz-transform: scale(0.5) translate(40%, 50%);
+    -o-transform: scale(0.5) translate(40%, 50%);
+    -ms-transform: scale(0.5) translate(40%, 50%);
+    transform: scale(0.5) translate(40%, 50%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0%, 0%);
+    -moz-transform: scale(1) translate(0%, 0%);
+    -o-transform: scale(1) translate(0%, 0%);
+    -ms-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@keyframes growBlue {
+  from {
+    -webkit-transform: scale(0.5) translate(40%, 50%);
+    -moz-transform: scale(0.5) translate(40%, 50%);
+    -o-transform: scale(0.5) translate(40%, 50%);
+    -ms-transform: scale(0.5) translate(40%, 50%);
+    transform: scale(0.5) translate(40%, 50%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0%, 0%);
+    -moz-transform: scale(1) translate(0%, 0%);
+    -o-transform: scale(1) translate(0%, 0%);
+    -ms-transform: scale(1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-moz-keyframes cellInX {
+  from {
+    -webkit-transform: translate(10px, 0);
+    -moz-transform: translate(10px, 0);
+    -o-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-webkit-keyframes cellInX {
+  from {
+    -webkit-transform: translate(10px, 0);
+    -moz-transform: translate(10px, 0);
+    -o-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@-o-keyframes cellInX {
+  from {
+    -webkit-transform: translate(10px, 0);
+    -moz-transform: translate(10px, 0);
+    -o-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+@keyframes cellInX {
+  from {
+    -webkit-transform: translate(10px, 0);
+    -moz-transform: translate(10px, 0);
+    -o-transform: translate(10px, 0);
+    -ms-transform: translate(10px, 0);
+    transform: translate(10px, 0);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
 }
