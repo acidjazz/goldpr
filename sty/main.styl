@@ -1,19 +1,16 @@
 
 vendor-prefixes ?= webkit moz o ms official
 
-c = {}
-for key, value in data.colors
-  c[key] = convert(value)
-
-// needed
+@import '/inc/mixins'
 @import guide
-@import vendor
-@import mixins
-@import fonts
-//@import /inc/*
+@import '/inc/*'
 
 .clear
   clearfix()
+
+html, body
+  margin 0
+  padding 0
 
 body
   margin 0

@@ -1,5 +1,11 @@
 
-.header
-  .icons 3 icons
-  .logo  tpl logo
+header
+  .logo
+    include ../../pub/svg/goldpr.svg
+
+  .menu
+    each option in data.menu
+      li=option
+  .clear
+
 
