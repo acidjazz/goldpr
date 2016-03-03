@@ -1,30 +1,34 @@
 extends inc/layout
 
 block content
-  .soon
-    .clear
-    .border
+  .section.top
 
-      .box
-        .sector.left
-          .logo
-            include ../pub/svg/goldpr.svg
-        .sector.right
-          .detail
-            .title Coming Soon!
-            .copy We're busy creating a brand new experience for you! We hope you will visit again soon to see what we've been doing.
-            a.button(href='mailto:info@goldpr.com') GET IN TOUCH
-            .socials
-              a.social.social_twitter(href='https://twitter.com/GOLDPR_')              
-                include ../pub/svg/twitter.svg
-              a.social.social_instagram(href='https://instagram.com/goldpr/')              
-                include ../pub/svg/instagram.svg
-              a.social.social_facebook(href='https://www.facebook.com/GoldPR')
-                include ../pub/svg/facebook.svg
-        .clear
+    .lax.cheers
+      .inner
+        .overlay.gold.topright.upper visionaries. strategists. specialists. storytellers.
+
+    .dblreds
+    .title who we are
+
+    .copy GOLD PR is a data-driven public relations and social media marketing agency that delivers unrivaled results for today’s emerging and market-leading health & wellness, beauty, medical technology, automotive, food & beverage companies. 
+    .xing x x x
+    .copy We are an independently-owned firm with boutique quality service and global agency results and resources. We are founded on the belief that size does matter. We deliver extraordinary results for our clients without the layers and subsequent costs of big agencies.  Our thinking is different and unencumbered by traditional agency boundaries. We are relentless about results and uncompromising with our standards.  This translates into growth for your business. 
+    
+    .dblreds
+
+    .lax.standout
+      .inner
+        .overlay.red.centered
+          .title standout
+          .text noun stand out \'stand-at\
+          .text : one that is prominent or conspicous
+          .text especially because of excellence
+
+    .dblreds
+    .title 
+      | we are a 
+      .f_h4 standout&nbsp;
+      | agency partner
 
   script(type='text/javascript').
-    function loadercomplete() {
-      Loader.load('./jst/index.js', 'Index');
-      //Global.i()
-    }
+    Loader.load('/jst/index.js', 'Index');

@@ -3,17 +3,16 @@ extends ../inc/layout
 
 block content
   .guide
-    .title Gold PR style guide
 
     .sections
+
       .section.colors
         .title Colors
         each color, name in data.colors
           .color(class='color_'+name) #{name} (#{color})
+
       .section.fonts
         .title Fonts
-
-        .font.font_f_copy f_copy 16px gotham book
-        .font.font_f_copy2 f_copy2 20px gotham book
-        .font.font_f_h1 f_h1 40px neutratext bold 
-      .clear
+        each font, name in data.fonts
+          .font(class='font_' + name) #{name}: #{font}
+ 
