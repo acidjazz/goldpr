@@ -1,0 +1,24 @@
+{
+  "name": "goldpr",
+  "description": "GoldPR",
+  "main": "index.html",
+  "authors": [
+    "Kevin Olson"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "goldpr"
+  ],
+  "homepage": "https://github.com/acidjazz/goldpr",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}
