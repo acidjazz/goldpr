@@ -110,6 +110,7 @@ gulp.task('sync', function() {
   gulp.watch('cof/**/*.coffee', ['coffee']);
   gulp.watch('sty/**/*.styl', ['stylus']);
   gulp.watch('tpl/**/*.jade', ['jade']);
+  gulp.watch('pub/svg**/*.svg', ['jade']);
   gulp.start('mogrify:start');
 
 });
