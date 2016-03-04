@@ -2,7 +2,7 @@ Index =
 
   i: ->
 
-    setInterval Index.check, 200
+    setInterval Index.check, 50
 
   check: ->
 
