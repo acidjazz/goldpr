@@ -10,7 +10,7 @@ Index =
       if Index.inViewport el
         perc = Index.viewable el
         thresh = $(el).data 'thresh'
-        thresh = 70 if thresh is undefined
+        thresh = 50 if thresh is undefined
         if perc > thresh and $(el).hasClass 'off'
           _.on $(el)
         if perc < thresh and $(el).hasClass 'on'

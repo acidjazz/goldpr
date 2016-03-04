@@ -66,12 +66,22 @@
         > .title
           color: c.white1
 
+.lax.off > .inner 
+  opacity 0
+  transform scale(1.2)
+  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
+
+.lax.on > .inner 
+  opacity 1
+  transform scale(1)
+  transition opacity 0.5s linear 0s, transform 0.5s linear 0s
+
 .lax.off > .inner > .overlay
   opacity 0
   transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
 .lax.on > .inner > .overlay
   opacity 1
-  transition opacity 0.5s linear 0s, transform 0.5s linear 0s
+  transition opacity 0.5s linear 0.3s, transform 0.5s linear 0.3s
 
 .lax.off > .inner > .overlay.topright,
 .lax.off > .inner > .overlay.midright
@@ -325,4 +335,32 @@ a.link
       background-size contain
       background-position 50% 50%
       background-repeat no-repeat
+
+.clientlist.off > .client
+  opacity 0
+  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
+  transform scale(1.5)
+.clientlist.on > .client
+  opacity 1
+  transform scale(1)
+  transition opacity 0.2s linear 0s, transform 0.2s linear 0s
+
+.clientlist.on > .client:nth-child(1)
+  transition-delay 0.1s
+.clientlist.on > .client:nth-child(2)
+  transition-delay 0.2s
+.clientlist.on > .client:nth-child(3)
+  transition-delay 0.3s
+.clientlist.on > .client:nth-child(4)
+  transition-delay 0.4s
+.clientlist.on > .client:nth-child(5)
+  transition-delay 0.5s
+.clientlist.on > .client:nth-child(6)
+  transition-delay 0.6s
+.clientlist.on > .client:nth-child(7)
+  transition-delay 0.7s
+.clientlist.on > .client:nth-child(8)
+  transition-delay 0.8s
+.clientlist.on > .client:nth-child(9)
+  transition-delay 0.9s
 
