@@ -70,19 +70,19 @@
 .lax.off > .inner 
   opacity 0.5
   transform scale(1.2)
-  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
+  transition opacity 0.2s linear 0.2s, transform 0.2s ease-out 0.2s
 
 .lax.on > .inner 
   opacity 1
   transform scale(1)
-  transition opacity 0.5s linear 0s, transform 0.5s linear 0s
+  transition opacity 0.5s linear 0s, transform 0.5s ease-in 0s
 
 .lax.off > .inner > .overlay
   opacity 0
   transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
 .lax.on > .inner > .overlay
   opacity 1
-  transition opacity 0.5s linear 0.3s, transform 0.5s linear 0.3s
+  transition opacity 0.5s linear 0.4s, transform 0.5s linear 0.4s
 
 .lax.off > .inner > .overlay.topright,
 .lax.off > .inner > .overlay.midright
