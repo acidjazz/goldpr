@@ -103,8 +103,15 @@ gulp.task('sync', function() {
     open: false,
     server: {
       baseDir: 'pub/',
-      }
-    });
+    },
+    ghostMode: {
+      clicks: true,
+      forms: true,
+      scroll: false
+    },
+    scrollProportionally: false,
+    scrollRestoreTechnique: 'cookie'
+  });
 
   gulp.watch('dat/**/*', ['objectus','stylus','jade']);
   gulp.watch('cof/**/*.coffee', ['coffee']);
