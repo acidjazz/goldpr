@@ -29,28 +29,28 @@ block content
     .f_h4 standout&nbsp;
     | agency partner
 
-  .sections.laxin.off(data-thresh=50)
-    .section
+  .sections
+    .section.laxin.off
       .thumbnail
         include ../pub/svg/chat.svg
       .copy We have experience working with both consumer brands and business to business and do both very well. 
-    .section
+    .section.laxin.off
       .thumbnail
         include ../pub/svg/female.svg
       .copy We get women. We understand how the female consumer thinks, feels, processes information and connects with others. We know what influences her purchase behavior and how she comes to trust a brand.
-    .section
+    .section.laxin.off
       .thumbnail
         include ../pub/svg/doc.svg
       .copy Marketing in highly regulated environments is our forte. As specialists in aesthetics, medical device and pharma, we’ve pioneered PR and social media best practices for some of the largest brands in these categories.
-    .section
+    .section.laxin.off
       .thumbnail
         include ../pub/svg/horn.svg
       .copy The best marketing campaigns put experience first. We’ve pioneered experiential marketing with media, influencers and consumers in the aesthetics and beauty categories. We get the impact of UGC, endorsement and brand advocacy on a brand’s image and bottom line.
-    .section
+    .section.laxin.off
       .thumbnail.at
         include ../pub/svg/at.svg
       .copy Social media is a core competency. Our entire social team was “born digital.” They are social natives operating in a PR world. This collaborative thinking goes into every campaign we create.
-    .section
+    .section.laxin.off
       .thumbnail
         include ../pub/svg/reward.svg
       .copy We are selective about our clients. We don’t represent just anyone and everyone. We are honest about a client’s fit with us, as well as our fit with them, to ensure long-standing, mutually rewarding relationships. 
@@ -64,25 +64,25 @@ block content
   .copy.medium.upper.nobotpad Everything we do is rooted in data + insights + innovative content + measurement.
   .copy.notoppad GOLD PR looks at the entire marketing mix holistically to create the foundation of each client strategy. We’ve always practiced integrated marketing. It’s more than a buzz word to us.  The caliber of our team and rigorous content development process brings our clients’ stories to market in the most impactful way. Our planning, execution and measurement methodology uses channels of paid, earned, shared and owned media to help our clients reach customers who where they are consuming information in a meaningful, compelling and targeted way.			
   .xing x x x
-  .steps.laxin.off(data-thresh=30)
-    .step.left
+  .steps
+    .step.left.laxin.off(data-thresh=50)
       .number 1
       .title research
       .copy Our data and insight-driven approach to PR and social media accurately guides our strategy. It ensures that every message we create is delivered to the right people in the right place at the right time. We dive deep to get to the root of your business challenge, investigate the competitive landscape and analyze audience behaviors to determine the most progressive strategies.
-    .step.right
+    .step.right.laxin.off(data-thresh=50)
       .number 2
       .title ideate
       .copy All successful programs begin with an idea. An idea can move and inspire customer influencers to engage and embrace your brand. We stand for original ideas that rock the boat. Ideas that surprise, amaze and delight.  Taking a strong creative approach, we communicate these ideas through compelling and shareable stories built around the equity of your brand with your target audience at the core.
-    .step.left
+    .step.left.laxin.off(data-thresh=50)
       .number 3
       .title strategize
       .copy We believe that the most successful brands are useful, likeable and fascinating. We want to help our clients champion a purpose their audience cares about. We work to build brand relevance that challenges existing thinking and influences audiences to make the brand a productive part of their lives. We use a powerful blend of traditional public relations, social and digital media outreach, strategic partnerships and influencer seeding to reach the hearts and minds of target audiences. 
-    .step.right
+    .step.right.laxin.off(data-thresh=50)
       .number 4
       .title differentiate
       .copy The most powerful differentiator of a brand is its story.  Compelling business and brand storytelling drives impactful outcomes. In this “me-too” world, we help our clients stand out. We build campaigns that people remember, talk about, share with their friends and embrace. 
     .clear
-    .step.left
+    .step.left.laxin.off(data-thresh=50)
       .number 5
       .title prove
       .copy We believe results go beyond the ink, the airtime and number of impressions. We prove return through measured results. We provide comprehensive reporting across all of our programs, both off-and online. It is from this knowledge that we determine efficacy, key learnings and best practices.
@@ -98,31 +98,31 @@ block content
 
   .title our core values
 
-  .values.laxin.off(data-thresh=30)
-    .value
+  .values
+    .value.laxin.off
       .title RESPECT
       .copy We believe collaboration and listening is key to any successful partneship - with each other, with clients and client partner agencies. Respect builds trust and trust leads to a culture of open-minded acceptance, honesty and respect 100% of the time. 
-    .value
+    .value.laxin.off
       .title COMMITMENT
       .copy We believe in going the extra mile because it’s not crowded there. We think that bringing ideas, solutions and support before a client asks is essential. We treat our clients’ reputation, projects and budget as if they were our own. We work tirelessly to protect every brand’s marketing investment and ensure winning outcomes.
-    .value
+    .value.laxin.off
       .title INNOVATION
       .copy We treat every new challenge as an opportunity to break through the traditional mold with creative thinking. We help brands craft their innovation into stories that build a solid foundation for market leadership and growth.
 
-    .value
+    .value.laxin.off
       .title COLLABORATION
       .copy We enjoy collaborative partnerships with our clients and their other partners – founded on the belief that to be successful – we need to work together to find innovative approaches to everyday communication needs. The best collaborations create something bigger than the sum of what we could create on our own and always results in more successful outcomes. 
 
-    .value
+    .value.laxin.off
       .title EXCEED
       .copy We believe in real insights, analytics and most importantly, return on investment. We are relentlessly in pursuit of organizational results that impact our clients’ bottom line. We love to see our work  disrupt thinking, perception and markets. We strive to exceed expectations.
-    .value
+    .value.laxin.off
       .title EVOLVE
       .copy Change is constant. We embrace it. And we adapt. Our entrepreneurial approach and agility allows us to shift gears and instantly evolve with changes in client organizations, market conditions, media landscape, technology and trends. 
-    .value
+    .value.laxin.off
       .title TALENT
       .copy We hire it. Retain it. Reward it. Cultivate it. Over 50 percent of our team has been with us for half a decade or more. And they bring their friends. 
-    .value
+    .value.laxin.off
       .title FUN.
       .copy We believe that happier people do better work and that you should love what you do and who you do it with. We do. 
     .clear
@@ -219,8 +219,9 @@ block content
 
   .teamlist
     each member, index in data.team
-      .member
+      .member.laxin.off
         .inner(style="background-image: url(/img/team/#{index}.jpg)")
+        .name=member
     .clear
 
   .dblreds
@@ -234,9 +235,9 @@ block content
   .copy.center A few clients from our past & present
   .copy.center An agency is the sum total of its people and hteir collective experience.  Our team has served a wide range of clients ove rhte years, both here at GOLD PR and in previous lives.
 
-  .clientlist.laxin.on(data-thresh=50)
+  .clientlist
     each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
-      .client
+      .client.laxin.off(data-thresh=30)
         .inner(style="background-image: url(/img/clients/#{i}.jpg)")
     .clear
 

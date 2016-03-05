@@ -55,7 +55,7 @@
       &.centered
         top 50%
         left 50%
-        margin-top -110px
+        margin-top -125px
         margin-left -197px
         text-align center
       &.gold
@@ -70,7 +70,7 @@
 .lax.off > .inner 
   opacity 0.5
   transform scale(1.2)
-  transition opacity 0.5s linear 0.5s, transform 1s linear 0.5s
+  transition opacity 0.5s linear 2s, transform 1s linear 2s
 
 .lax.on > .inner 
   opacity 1
@@ -179,29 +179,22 @@ a.link
       padding 30px 50px
       line-height 30px
 
-.sections.off > .section
+
+.sections > .section.off
   opacity 0
   transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
-.sections.on > .section
+.sections > .section.on
   opacity 1
   transform translate(0, 0)
   transition opacity 0.2s linear 0s, transform 0.2s linear 0s
 
-.sections.off > .section
+.sections > .section.off
   transform translate(-20px, 0)
 
-.sections > .section:nth-child(1)
-  transition-delay 0.1s
-.sections > .section:nth-child(2)
-  transition-delay 0.2s
-.sections > .section:nth-child(3)
-  transition-delay 0.3s
-.sections > .section:nth-child(4)
-  transition-delay 0.4s
-.sections > .section:nth-child(5)
-  transition-delay 0.5s
-.sections > .section:nth-child(6)
-  transition-delay 0.6s
+for num in 1..3
+  .sections > .section:nth-child(3n+{num})
+    transition-delay unit(num*0.1, 's')
+
 
 .cta
   font: f.h2
@@ -237,27 +230,17 @@ a.link
     > .copy
       padding 0 100px 0 0
 
-.steps.off > .step
+.steps > .step.off
   opacity 0
-  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
-.steps.on > .step
+  transition opacity 0.2s linear 1s, transform 0.2s linear 1s
+.steps > .step.on
   opacity 1
   transform translate(0, 0)
   transition opacity 0.4s linear 0s, transform 0.4s linear 0s
 
-.steps.off > .step
+.steps > .step.off
   transform translate(0, -40px)
 
-.steps > .step:nth-child(1)
-  transition-delay 0.2s
-.steps > .step:nth-child(2)
-  transition-delay 0.4s
-.steps > .step:nth-child(3)
-  transition-delay 0.6s
-.steps > .step:nth-child(4)
-  transition-delay 0.8s
-.steps > .step:nth-child(6)
-  transition-delay 1.0s
 
 
 
@@ -278,10 +261,10 @@ a.link
         -webkit-column-break-before always
 
 
-.values.off 
+.values > .value.off 
   opacity 0
   transition opacity 0.2s linear 0.2s
-.values.on 
+.values > .value.on 
   opacity 1
   transition opacity 0.2s linear 0s
 
@@ -308,12 +291,36 @@ a.link
   > .member
     width 33%
     float left
+    position relative
     > .inner
-      width 100%
+      width 90%
+      margin 5%
       height 300px
       background-size cover
       background-position 100% 0%
       background-repeat no-repeat
+    > .name
+      position absolute
+      bottom 10%
+      left 5%
+      background-color: rgba(c.white2, 0.8)
+      color: c.gold1
+      width 50%
+      padding 10px
+      text-align center
+.teamlist > .member.off
+  opacity 0
+  transition opacity 0.2s linear 1s, transform 0.2s linear 1s
+  transform translate(0, -20px)
+.teamlist > .member.on
+  opacity 1
+  transition opacity 0.2s linear 0s, transform 0.2s linear 0s
+  transform translate(0, 0)
+
+for num in 1..3
+  .teamlist > .member:nth-child(3n+{num})
+    transition-delay unit(num*0.1, 's')
+
 
 .clientlist
   width 900px
@@ -328,21 +335,72 @@ a.link
       background-position 50% 50%
       background-repeat no-repeat
 
-.clientlist.off > .client
+.clientlist > .client.off
   opacity 0
-  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
+  transition opacity 0.2s linear 1s, transform 0.2s linear 1s
   transform scale(1.5)
-.clientlist.on > .client
+.clientlist > .client.on
   opacity 1
   transform scale(1)
   transition opacity 0.2s linear 0s, transform 0.2s linear 0s
 
-for num in 0..27
-  .clientlist.on > .client:nth-child({num})
-    transition-delay unit(num*0.05, 's')
+for num in 1..5
+  .clientlist > .client:nth-child(5n+{num})
+    transition-delay unit(num*0.1, 's')
 
 @media all and (min-width: 1px) and (max-width: 1000px)
   .lax
     height 40vh
+  .copy
+    padding 10px 20px
 
+  .sections
+    padding 10px 20px
+    > .section
+      width 100%
+      float none
+      margin auto
+      > .copy
+        padding 10px 10px 50px 10px
+  .steps
+    width 100%
+    > .step
+      width 90%
+      margin 5% !important
+      float none !important
+      > .number
+        margin 0
+      > .copy
+        padding 0
+  .values
+    width auto
+    padding 10px 
+    column-count auto
+    column-gap 1px
+    &:nth-child(5) > .title
+        -webkit-column-break-before avoid
 
+  .listings
+    width auto
+    padding 20px 10px
+    column-count auto
+    column-gap 0px
+    > .listing > .title
+      padding 10px 0 5px 0
+  
+  .teamlist
+    width auto
+    > .member
+      width auto
+      float none
+      margin auto
+  .clientlist
+    width auto
+    > .client
+      width 50%
+      margin auto
+      > .inner
+        margin 10px
+  for num in 1..2
+    .clientlist > .client:nth-child(2n+{num})
+      transition-delay unit(num*0.1, 's')
