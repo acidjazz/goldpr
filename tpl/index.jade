@@ -216,6 +216,13 @@ block content
   .copy We are a diverse, high energy team of award-winning, senior marketing, communications and social and digital media professionals that are passionate about delivering results for our clients.
   .copy We are corporate communications refugees and former large agency executives. We come from varied backgrounds and have chosen to work in an entrepreneurial environment committed to highly personalized client engagement. 
 
+
+  .teamlist
+    each member, index in data.team
+      .member
+        .inner(style="background-image: url(/img/team/#{index}.jpg)")
+    .clear
+
   .dblreds
   .lax.laxin.clients.off
     .inner
@@ -227,10 +234,10 @@ block content
   .copy.center A few clients from our past & present
   .copy.center An agency is the sum total of its people and hteir collective experience.  Our team has served a wide range of clients ove rhte years, both here at GOLD PR and in previous lives.
 
-  .clientlist.laxin.off(data-thresh=50)
-    each i in [1,2,3,4,5,6,7,8,9]
+  .clientlist.laxin.on(data-thresh=50)
+    each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
       .client
-        .inner(style="background-image: url(/img/client#{i}.jpg)")
+        .inner(style="background-image: url(/img/clients/#{i}.jpg)")
     .clear
 
   .dblreds
