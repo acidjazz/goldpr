@@ -9,7 +9,6 @@ Index =
 
     Index.cache.window = $(window)
 
-    Index.handlers()
 
     if Index.cache.window.width() > 1000
       setInterval Index.header, 50
@@ -19,19 +18,30 @@ Index =
     if location.hash isnt ''
       _.on ".option_#{location.hash.replace('#','')}"
 
+    Index.handlers()
 
   handlers: ->
 
-    $('header > .inner > .menu > .option').click Index.option
+    $('header > .inner > .menu > a.option, .mobile > .inner > .menu > a.option').click Index.option
+    $('.burger').click Index.burger
 
-  option:(e) ->
+  burger: ->
+    _.swap '.mobile, .burger'
+
+  option:(event) ->
+
+    event.preventDefault()
+
     hash = $(this).html()
-    _.off 'header > .inner > .menu > .option'
+    _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
+    _.off '.mobile, .burger'
     _.on ".option_#{hash}"
-    e.preventDefault()
-    location.hash = hash
-    $('html, body').scrollTo "##{hash}",
-      offset: -60
+    setTimeout ->
+      $('html, body').scrollTo "##{hash}",
+        duration: 50
+        offset: -60
+      location.hash = hash
+    , 200
 
   header: ->
 

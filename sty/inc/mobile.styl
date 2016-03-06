@@ -1,0 +1,70 @@
+.mobile
+  display none
+  position fixed
+  background-color: c.gold1
+  top 0
+  right 0
+  width 200px
+  bottom 0
+  z-index 200
+  transform-origin center
+  transition transform 0.5s ease-in-out
+  &.on
+    transform translate(0, 0)
+  &.off
+    transform translate(200px, 0)
+  > .inner
+    position relative
+    > .menu
+      margin 80px 0 0 0
+      > .option
+        display block
+        text-decoration none
+        font: f.h3
+        text-align right
+        color: c.white1
+        padding 10px
+        text-transform uppercase
+        &.on
+          background-color: c.white1
+          color: c.gold1
+
+.burger
+  display none
+  position fixed
+  top 10px
+  right 10px
+  width 60px
+  height 60px
+  transform-origin center
+  transition transform 1s 
+  transition-timing-function: cubic-bezier(.87,-.41,.19,1.44)
+  z-index 210
+  &.on
+    transform rotate(180deg) 
+  &.off
+    transform rotate(0deg) 
+  > .line
+    width 50px
+    height 7px
+    border-radius 7px 
+    background-color: c.gold1
+    margin 10px auto 0 auto
+  &.on > .line
+    background-color: c.white1
+    transition transform 0.25s ease-in 0.25s, width 0.25s ease-in 0.25s, background 0s linear 0.1s
+  &.off > .line
+    background-color: c.gold1
+    transition transform 0.25s ease-in 0.25s, width 0.25s ease-in 0.25s, background 0s linear 0.5s
+  &.on > .line:nth-child(2)
+    transform rotate(45deg) translate(14px, -3px)
+    width 25px
+  &.on > .line:nth-child(4)
+    transform rotate(-45deg) translate(14px, 3px)
+    width 25px
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  .mobile
+    display block
+  .burger
+    display block
