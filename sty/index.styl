@@ -1,4 +1,3 @@
-
 .lax
   height 40vw
   overflow hidden
@@ -241,9 +240,6 @@ for num in 1..3
 .steps > .step.off
   transform translate(0, -40px)
 
-
-
-
 .values
   width 900px
   margin auto
@@ -353,6 +349,12 @@ for num in 1..5
     height 40vh
   .copy
     padding 10px 20px
+    &.nobotpad
+      padding 10px 20px 0 20px
+    &.notoppad
+      padding 0 20px 10px 20px
+
+
 
   .sections
     padding 10px 20px
@@ -394,13 +396,17 @@ for num in 1..5
       width auto
       float none
       margin auto
+
   .clientlist
     width auto
+    text-align center
     > .client
-      width 50%
+      width 40%
+      float none
       margin auto
+      display inline-block
       > .inner
-        margin 10px
+        margin 10px 0
   for num in 1..2
     .clientlist > .client:nth-child(2n+{num})
       transition-delay unit(num*0.1, 's')
