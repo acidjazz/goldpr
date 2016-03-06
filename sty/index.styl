@@ -234,10 +234,14 @@ for num in 1..3
 
 .values > .value.off 
   opacity 0
-  transition opacity 0.2s linear 0.2s
+  transition opacity 0.2s linear 1s
 .values > .value.on 
   opacity 1
   transition opacity 0.2s linear 0s
+
+for num in 1..2
+  .values > .value:nth-child(2n+{num})
+    transition-delay unit(num*0.1, 's')
 
 .listings
   width 900px

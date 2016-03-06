@@ -11,7 +11,7 @@ Index =
 
     Index.handlers()
 
-    if $(window).width() > 1000
+    if Index.cache.window.width() > 1000
       setInterval Index.header, 20
 
     setInterval Index.check, 10
@@ -63,13 +63,14 @@ Index =
         if perc < thresh and jel.hasClass 'on'
           _.off jel
 
-        if jel.hasClass 'laxin_vert'
-          val = Math.round(diff)
-          if Index.vals?[i] isnt val
-            jel.find('.inner:first').css 'transform', "translate3d(0, #{val*3}px, 0px)"
-            jel.find('.overlay').css 'transform', "translate3d(0, #{val}px, 0px)"
-            jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/4}px, 0px)"
-            Index.vals[i] = val
+        if Index.cache.window.width() > 1000
+          if jel.hasClass 'laxin_vert'
+            val = Math.round(diff)
+            if Index.vals?[i] isnt val
+              jel.find('.inner:first').css 'transform', "translate3d(0, #{val*3}px, 0px)"
+              jel.find('.overlay').css 'transform', "translate3d(0, #{val}px, 0px)"
+              jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/4}px, 0px)"
+              Index.vals[i] = val
 
    
   inViewport: (el) ->
