@@ -14,7 +14,7 @@ Index =
     if Index.cache.window.width() > 1000
       setInterval Index.header, 20
 
-    setInterval Index.check, 10
+    setInterval Index.check, 20
 
     if location.hash isnt ''
       _.on ".option_#{location.hash.replace('#','')}"
