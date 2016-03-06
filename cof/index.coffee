@@ -11,8 +11,8 @@ Index =
 
     Index.handlers()
 
-    #if Index.cache.window.width() > 1000
-    #  setInterval Index.header, 20
+    if Index.cache.window.width() > 1000
+      setInterval Index.header, 50
 
     setInterval Index.check, 10
 
