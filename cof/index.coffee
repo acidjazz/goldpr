@@ -1,8 +1,28 @@
 Index =
 
   i: ->
+    Index.handlers()
 
     setInterval Index.check, 50
+
+  handlers: ->
+
+    $('header > .menu > .option').click Index.option
+
+  option: ->
+    if hashTagActive != @hash
+      #this will prevent if the user click several times the same link to freeze the scroll.
+      event.preventDefault()
+      #calculate destination place
+      dest = 0
+      if $(@hash).offset().top > $(document).height() - $(window).height()
+        dest = $(document).height() - $(window).height()
+      else
+        dest = $(@hash).offset().top
+      #go to destination
+      $('html,body').animate { scrollTop: dest-50 }, 1000, 'swing'
+      hashTagActive = @hash
+      location.hash = @hash
 
   check: ->
 
