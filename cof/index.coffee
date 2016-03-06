@@ -1,5 +1,6 @@
 Index =
 
+  vals: []
   cache:
     window: window
     stickied: false
@@ -13,7 +14,7 @@ Index =
     if $(window).width() > 1000
       setInterval Index.header, 20
 
-    setInterval Index.check, 20
+    setInterval Index.check, 10
 
     if location.hash isnt ''
       _.on ".option_#{location.hash.replace('#','')}"
@@ -47,6 +48,7 @@ Index =
 
   check: ->
 
+
     $('.laxin').each (i, el) ->
 
       if Index.inViewport el
@@ -62,12 +64,12 @@ Index =
           _.off jel
 
         if jel.hasClass 'laxin_vert'
-          jel.find('.inner:first').css 'transform', "translate(0, #{diff*3}px)"
-          jel.find('.overlay').css 'transform', "translate(0, #{diff}px)"
-          jel.find('.overlay > .inner').css 'transform', "translate(0, #{diff/3}px)"
-
-
-
+          val = Math.round(diff)
+          if Index.vals?[i] isnt val
+            jel.find('.inner:first').css 'transform', "translate3d(0, #{val*3}px, 0px)"
+            jel.find('.overlay').css 'transform', "translate3d(0, #{val}px, 0px)"
+            jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/4}px, 0px)"
+            Index.vals[i] = val
 
    
   inViewport: (el) ->
