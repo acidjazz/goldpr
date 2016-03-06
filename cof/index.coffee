@@ -22,7 +22,10 @@ Index =
 
   handlers: ->
 
-    $('header > .inner > .menu > a.option, .mobile > .inner > .menu > a.option').click Index.option
+    $('
+      header > .inner > .menu > a.option, .mobile > .inner > .menu > a.option,
+      header > .inner a.logo
+    ').click Index.option
     $('.burger').click Index.burger
 
   burger: ->
@@ -32,7 +35,7 @@ Index =
 
     event.preventDefault()
 
-    hash = $(this).html()
+    hash = $(this).data 'anchor'
     _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
     _.off '.mobile, .burger'
     _.on ".option_#{hash}"
