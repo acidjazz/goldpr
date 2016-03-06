@@ -1,29 +1,70 @@
 header
-  desktop()
-  padding 20px
-  > .logo
-    float left
-    width 250px
-    height 120px
-  > .menu
-    float right
-    margin 50px 0 0 0
-    font: f.copy2
-    > .option
-      cursor pointer
+  > .inner
+    desktop()
+    padding 20px
+    > .logo
       float left
-      padding 10px
-      margin 0 0 0 10px
-      text-align center
-      text-transform uppercase
-      color: c.gold1
-      transition border 2s linear
-      text-decoration none
-      &:hover
-        border-bottom: 2px solid c.gold1
-      &.on
-        background-color: c.gold1
-        color: c.white1
+      width 250px
+      height 120px
+      > svg #blueCircle
+        animation growBlue 1s ease-in 0.2s both
+        animation-timing-function: cubic-bezier(.87,-.41,.19,1.44)
+        
+    > .menu
+      float right
+      margin 50px 0 0 0
+      font: f.copy2
+      > .option
+        cursor pointer
+        float left
+        padding 10px
+        margin 0 0 0 10px
+        text-align center
+        text-transform uppercase
+        color: c.gold1
+        transition border 2s linear
+        text-decoration none
+        animation cellOutY 0.2s 0.2s ease-in both
+        for num in 1..6
+          &:nth-child({num})
+            animation-delay unit(num*0.1 + 0.2, 's')
+        &:hover
+          border-bottom: 2px solid c.gold1
+        &.on
+          background-color: c.gold1
+          color: c.white1
+
+
+header#sticky
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 100
+  background-color: c.white1
+  border-bottom: 2px solid rgba(c.gold1, 0.8)
+  animation cellOutY 0.2s 0s ease-in both
+  onoff()
+  > .inner
+    padding 0
+    > .logo
+      width 50px
+      height 60px
+      overflow hidden
+      > svg
+        width 120px
+    > .menu
+       margin 10px 0 0 0
+       > .option
+        animation none
+
+
+
+@keyframes growBlue
+  from
+    transform scale(0.5) translate(40%, 50%)
+  to
+    transform scale(1) translate(0%, 0%)
 
 @media all and (min-width: 1px) and (max-width: 1000px)
 

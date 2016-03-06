@@ -42,7 +42,10 @@ gulp.task('objectus', function() {
 
 gulp.task('vendors', function() {
 
-  gulp.src(['bower_components/jquery/dist/jquery.js'])
+  gulp.src([
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/jquery.scrollTo/jquery.scrollTo.js',
+  ])
   .pipe(sourcemaps.init())
   .pipe(uglify())
   .pipe(concat('vendor.min.js'))

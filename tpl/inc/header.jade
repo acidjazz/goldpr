@@ -1,11 +1,6 @@
 
 header
-  .logo
-    include ../../pub/svg/goldpr.svg
-
-  .menu
-    each option in data.menu
-      a.option.on(href="##{option}")=option
-  .clear
-
+  include _header
+header#sticky.off
+  include _header
 

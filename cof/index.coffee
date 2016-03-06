@@ -1,40 +1,73 @@
 Index =
 
+  cache:
+    window: window
+    stickied: false
+
   i: ->
+
+    Index.cache.window = $(window)
+
     Index.handlers()
 
-    setInterval Index.check, 50
+    if $(window).width() > 1000
+      setInterval Index.header, 20
+
+    setInterval Index.check, 20
+
+    if location.hash isnt ''
+      _.on ".option_#{location.hash.replace('#','')}"
+
 
   handlers: ->
 
-    $('header > .menu > .option').click Index.option
+    $('header > .inner > .menu > .option').click Index.option
 
-  option: ->
-    if hashTagActive != @hash
-      #this will prevent if the user click several times the same link to freeze the scroll.
-      event.preventDefault()
-      #calculate destination place
-      dest = 0
-      if $(@hash).offset().top > $(document).height() - $(window).height()
-        dest = $(document).height() - $(window).height()
-      else
-        dest = $(@hash).offset().top
-      #go to destination
-      $('html,body').animate { scrollTop: dest-50 }, 1000, 'swing'
-      hashTagActive = @hash
-      location.hash = @hash
+
+  option:(e) ->
+    hash = $(this).html()
+    _.off 'header > .inner > .menu > .option'
+    _.on ".option_#{hash}"
+    e.preventDefault()
+    location.hash = hash
+    $('html, body').scrollTo "##{hash}",
+      offset: -60
+
+  header: ->
+
+    stickySpot = 200
+
+    if Index.cache.window.scrollTop() > stickySpot and Index.cache.stickied is false
+      _.on '#sticky'
+      Index.cache.stickied = true
+
+    if Index.cache.window.scrollTop() < stickySpot and Index.cache.stickied is true
+      _.off '#sticky'
+      Index.cache.stickied = off
 
   check: ->
 
     $('.laxin').each (i, el) ->
+
       if Index.inViewport el
-        perc = Index.viewable el
-        thresh = $(el).data 'thresh'
+        [perc, diff] = Index.viewable el
+        jel = $(el)
+
+        thresh = jel.data 'thresh'
         thresh = 50 if thresh is undefined
-        if perc > thresh and $(el).hasClass 'off'
-          _.on $(el)
-        if perc < thresh and $(el).hasClass 'on'
-          _.off $(el)
+
+        if perc > thresh and jel.hasClass 'off'
+          _.on jel
+        if perc < thresh and jel.hasClass 'on'
+          _.off jel
+
+        if jel.hasClass 'laxin_vert'
+          jel.find('.inner:first').css 'transform', "translate(0, #{diff*3}px)"
+          jel.find('.overlay').css 'transform', "translate(0, #{diff}px)"
+          jel.find('.overlay > .inner').css 'transform', "translate(0, #{diff/3}px)"
+
+
+
 
    
   inViewport: (el) ->
@@ -53,7 +86,9 @@ Index =
     elMiddle = rect.top + height/2
     winMiddle = window.innerHeight/2
     max = window.innerHeight/2 + height/2
-    diff = Math.abs(winMiddle-elMiddle)
-    perc = Math.round 100 - diff*100/max
+    diff = winMiddle-elMiddle
+    perc = 100 - Math.abs(diff)*100/max
+    nonabs = Math.abs(diff)*100/max
+    nonabs = -nonabs if diff < 0
 
-    return perc
+    return [perc, nonabs]

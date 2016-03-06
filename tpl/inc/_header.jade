@@ -1,0 +1,10 @@
+.inner
+  a.logo(href='/')
+    include ../../pub/svg/goldpr.svg
+
+  .menu
+    each option in data.menu
+      a.option.off(class="option_#{option}",href="##{option}")=option
+  .clear
+
+
