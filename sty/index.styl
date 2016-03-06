@@ -54,7 +54,7 @@
       &.centered
         top 50%
         left 50%
-        margin-top -125px
+        margin-top -126px
         margin-left -197px
         text-align center
       &.gold
@@ -346,7 +346,10 @@ for num in 1..5
 
 @media all and (min-width: 1px) and (max-width: 1000px)
   .lax
-    height 40vh
+    height 70vw
+    > .inner > .overlay.centered
+      margin-top -106px
+  
   .copy
     padding 10px 20px
     &.nobotpad
@@ -359,9 +362,9 @@ for num in 1..5
   .sections
     padding 10px 20px
     > .section
-      width 100%
-      float none
+      width auto
       margin auto
+      transition-delay 0s !important
       > .copy
         padding 10px 10px 50px 10px
   .steps
@@ -405,6 +408,8 @@ for num in 1..5
       float none
       margin auto
       display inline-block
+      opacity 1 !important
+      transform scale(1) !important
       > .inner
         margin 10px 0
   for num in 1..2
