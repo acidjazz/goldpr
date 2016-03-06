@@ -29,7 +29,7 @@ Index =
     $('.burger').click Index.burger
 
   burger: ->
-    _.swap '.mobile, .burger'
+    _.swap '.mobile, .burger, .menu'
 
   option:(event) ->
 
@@ -44,6 +44,7 @@ Index =
         duration: 50
         offset: -60
       location.hash = hash
+      _.off '.mobile > .inner > .menu > .option'
     , 200
 
   header: ->
