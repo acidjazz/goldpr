@@ -66,7 +66,7 @@ Index =
           if jel.hasClass 'laxin_vert'
             val = Math.round(diff)
             if Index.vals?[i] isnt val
-              jel.find('.inner:first').css 'transform', "translate3d(0, #{val*7}px, 0px)"
+              jel.find('.inner:first').css 'transform', "translate3d(0, #{val*6}px, 0px)"
               jel.find('.overlay').css 'transform', "translate3d(0, #{val*2}px, 0px)"
               jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/5}px, 0px)"
               Index.vals[i] = val
