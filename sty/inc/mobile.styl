@@ -17,6 +17,7 @@
     position relative
     > .menu
       margin 80px 0 0 0
+      onoff()
       > .option
         display block
         text-decoration none
@@ -24,6 +25,10 @@
         text-align right
         color: c.white1
         padding 10px
+        animation cellInX 0.2s 0.2s ease-in both
+        for num in 1..7
+          &:nth-child({num})
+            animation-delay unit(num*0.05 + 0.2, 's')
         text-transform uppercase
         &.on
           background-color: c.white1

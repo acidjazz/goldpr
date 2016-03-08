@@ -4,6 +4,7 @@ Index =
   cache:
     window: window
     stickied: false
+    laxin: {}
 
   i: ->
 
@@ -13,7 +14,8 @@ Index =
     if Index.cache.window.width() > 1000
       setInterval Index.header, 50
 
-    setInterval Index.check, 10
+    Index.laxcache()
+    setInterval Index.check, 20
 
     if location.hash isnt ''
       _.on ".option_#{location.hash.replace('#','')}"
@@ -29,7 +31,7 @@ Index =
     $('.burger').click Index.burger
 
   burger: ->
-    _.swap '.mobile, .burger'
+    _.swap '.mobile, .burger, .burger > .inner > .menu'
 
   option:(event) ->
 
@@ -44,6 +46,7 @@ Index =
         duration: 50
         offset: -60
       location.hash = hash
+      _.off '.mobile > .inner > .menu > .option'
     , 200
 
   header: ->
@@ -58,10 +61,15 @@ Index =
       _.off '#sticky'
       Index.cache.stickied = off
 
+  laxcache: ->
+    $('.laxin').each (i, el) ->
+      Index.cache.laxin[i] = el
+
   check: ->
 
 
-    $('.laxin').each (i, el) ->
+    #$('.laxin').each (i, el) ->
+    for i, el of Index.cache.laxin
 
       if Index.inViewport el
         [perc, diff] = Index.viewable el
