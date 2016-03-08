@@ -2,7 +2,7 @@ extends inc/layout
 
 block content
 
-  .lax.laxin.laxin_vert.cheers.off
+  .lax.laxin.cheers.off
     .inner
     .overlay.gold.topright.upper
       .inner visionaries. strategists. specialists. storytellers.
@@ -16,7 +16,7 @@ block content
   
   .dblreds
 
-  .lax.laxin.laxin_vert.standout.off#standout
+  .lax.laxin.standout.off#standout
     .inner
     .overlay.red.centered
       .inner
@@ -92,7 +92,7 @@ block content
   
   .dblreds
 
-  .lax.laxin.laxin_vert.closecheers.off
+  .lax.laxin.closecheers.off
     .inner
     .overlay.gold.midleft.upper
       .inner our core values
@@ -130,7 +130,7 @@ block content
           
   .dblreds
 
-  .lax.laxin.laxin_vert.services.off
+  .lax.laxin.services.off
     .inner
     .overlay.gold.midright.upper.wider
       .inner services
@@ -208,7 +208,7 @@ block content
       .copy Social media advertising optimization and management
 
   .dblreds
-  .lax.laxin.laxin_vert.team.off#team
+  .lax.laxin.team.off#team
     .inner
     .overlay.gold.midleft.upper.wider
       .inner our team
@@ -219,13 +219,13 @@ block content
 
   .teamlist
     each member, index in data.team
-      .member.laxin.off
+      .member.laxin.off(data-thresh=20)
         .inner(style="background-image: url(/img/team/#{index}.jpg)")
         .name=member
     .clear
 
   .dblreds
-  .lax.laxin.laxin_vert.clients.off#clients
+  .lax.laxin.clients.off#clients
     .inner
     .overlay.gold.midright.upper.wider
       .inner clients
@@ -241,7 +241,7 @@ block content
     .clear
 
   .dblreds
-  .lax.laxin.laxin_vert.work.off#projects
+  .lax.laxin.work.off#projects
     .inner
     .overlay.gold.midleft.upper.wider work
   .dblreds
@@ -249,7 +249,7 @@ block content
   .copy.center GOLD PR’s charge is to deliver results for our clients by moving people and ideas to action. We measure these results in the form of stronger brands, increased sales, favorable issue outcomes and enhanced reputations. Our job is to help shape agendas, shift opinions and mobilize market forces to help our clients realize their goals.
 
   .dblreds
-  .lax.laxin.laxin_vert.contact.off#contact
+  .lax.laxin.contact.off#contact
     .inner
     .overlay.gold.midright.upper.wider
       .inner contact
