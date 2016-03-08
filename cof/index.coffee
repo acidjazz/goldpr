@@ -2,13 +2,15 @@ Index =
 
   vals: []
   cache:
-    window: window
+    window: false
+    home: false
     stickied: false
     laxin: {}
 
   i: ->
 
     Index.cache.window = $(window)
+    Index.cache.home = $('#home')
 
 
     if Index.cache.window.width() > 1000
@@ -51,20 +53,19 @@ Index =
 
   header: ->
 
-    stickySpot = 200
+    stickySpot = -200
 
-    if Index.cache.window.scrollTop() > stickySpot and Index.cache.stickied is false
+    if Index.cache.home.offset().top < stickySpot and Index.cache.stickied is false
       _.on '#sticky'
       Index.cache.stickied = true
 
-    if Index.cache.window.scrollTop() < stickySpot and Index.cache.stickied is true
+    if Index.cache.home.offset().top > stickySpot and Index.cache.stickied is true
       _.off '#sticky'
       Index.cache.stickied = off
 
   laxcache: ->
     $('.laxin').each (i, el) ->
       Index.cache.laxin[i] = el
-    console.log Index.cache.laxin
 
   check: ->
 
@@ -83,7 +84,7 @@ Index =
         if perc < thresh and jel.hasClass 'on'
           _.off jel
 
-        ###  
+        ###
         if Index.cache.window.width() > 1000
           if jel.hasClass 'laxin_vert'
             val = Math.round(diff)

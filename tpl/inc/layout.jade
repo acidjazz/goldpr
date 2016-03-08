@@ -95,8 +95,13 @@ html(lang='en')
     meta(name="theme-color",content="#ee697a")
 
   body
-    include header
-    block content
+    header#sticky.off
+      include _header
+    include mobile
+    #container
+      header#home
+        include _header
+      block content
 
     include footer
     script(type='text/javascript').
