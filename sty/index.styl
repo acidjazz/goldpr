@@ -2,6 +2,16 @@
   height 50vw
   overflow hidden
   position relative
+  transform-style inherit
+  &.cheers > .inner
+    background-image url(/img/lax/cheers.jpg)
+    background-position 20% 0%
+  &.standout > .inner
+    background-image url(/img/lax/standout.jpg)
+    background-position 50% 50%
+  &.closecheers > .inner
+    background-image url(/img/lax/closecheers.jpg)
+    background-position 50% 0%
   &.contact > .inner
     background-image url(/img/lax/contact.jpg)
     background-position 0% 70%
@@ -17,15 +27,6 @@
   &.services > .inner
     background-image url(/img/lax/services.jpg)
     background-position 0% 90%
-  &.closecheers > .inner
-    background-image url(/img/lax/closecheers.jpg)
-    background-position 0% 0%
-  &.cheers > .inner
-    background-image url(/img/lax/cheers.jpg)
-    background-position 0% 0%
-  &.standout > .inner
-    background-image url(/img/lax/standout.jpg)
-    background-position 50% 50%
   > .inner
     height 150%
     margin-top -20%
@@ -34,9 +35,9 @@
     position absolute
     font: f.h3
     padding 25px
+    letter-spacing 1px
     &.wider
       padding 25px 12vw
-    letter-spacing 1px
     > .title
       font: f.h1
     > .text
@@ -60,10 +61,10 @@
       margin-left -197px
       text-align center
     &.gold
-      background-color: rgba(c.white2, 0.8)
+      background-color: rgba(c.white2, 0.9)
       color: c.gold1
     &.red
-      background-color: rgba(c.red1, 0.8)
+      background-color: rgba(c.red1, 0.9)
       color: c.white1
       > .inner > .title
         color: c.white1
@@ -204,12 +205,24 @@ for num in 1..3
       padding 0
       color: c.red1
       margin -240px 0 0 0
+      transform translateZ(0)
     > .copy
       padding 0 100px 0 0
+      transform translateZ(0)
 
 .steps > .step.off
   opacity 0
   transition opacity 0.2s linear 1s, transform 0.2s linear 1s
+.steps > .step.off > .number
+  opacity 0.5
+  transform scale(1.2)
+  transition opacity 0.2s linear 1s, transform 0.2s linear 1s
+
+.steps > .step.on > .number
+  opacity 1
+  transform scale(1)
+  transition opacity 0.2s ease-out 0.2s, transform 0.2s ease-out 0.2s
+
 .steps > .step.on
   opacity 1
   transform translate(0, 0)
