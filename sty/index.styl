@@ -2,6 +2,7 @@
   height 50vw
   overflow hidden
   position relative
+  transform-style inherit
   &.contact > .inner
     background-image url(/img/lax/contact.jpg)
     background-position 0% 70%
@@ -27,9 +28,9 @@
     background-image url(/img/lax/standout.jpg)
     background-position 50% 50%
   > .inner
-    height 150%
-    margin-top -20%
+    transform perspective(1000px) translateZ(-20px) scale(30)
     background-size cover
+    height 100%
   > .overlay
     position absolute
     font: f.h3

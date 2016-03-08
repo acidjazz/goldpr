@@ -4,6 +4,7 @@ Index =
   cache:
     window: window
     stickied: false
+    laxin: {}
 
   i: ->
 
@@ -13,7 +14,8 @@ Index =
     if Index.cache.window.width() > 1000
       setInterval Index.header, 50
 
-    setInterval Index.check, 10
+    Index.laxcache()
+    setInterval Index.check, 50
 
     if location.hash isnt ''
       _.on ".option_#{location.hash.replace('#','')}"
@@ -59,10 +61,15 @@ Index =
       _.off '#sticky'
       Index.cache.stickied = off
 
+  laxcache: ->
+    $('.laxin').each (i, el) ->
+      Index.cache.laxin[i] = el
+    console.log Index.cache.laxin
+
   check: ->
 
-
-    $('.laxin').each (i, el) ->
+    #$('.laxin').each (i, el) ->
+    for i, el of Index.cache.laxin
 
       if Index.inViewport el
         [perc, diff] = Index.viewable el
@@ -76,14 +83,16 @@ Index =
         if perc < thresh and jel.hasClass 'on'
           _.off jel
 
+        ###  
         if Index.cache.window.width() > 1000
           if jel.hasClass 'laxin_vert'
             val = Math.round(diff)
-            if Index.vals?[i] isnt val*3
-              jel.find('.inner:first').css 'transform', "translate3d(0, #{val*3}px, 0px)"
+            if Index.vals?[i] isnt val*6
+              jel.find('.inner:first').css 'transform', "translate3d(0, #{val*6}px, 0px)"
               jel.find('.overlay').css 'transform', "translate3d(0, #{val*2}px, 0px)"
               jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/5}px, 0px)"
               Index.vals[i] = val*3
+        ###
    
   inViewport: (el) ->
 
