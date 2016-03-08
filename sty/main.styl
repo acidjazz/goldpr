@@ -13,6 +13,11 @@ html, body
   padding 0
   height 100%
   overflow hidden
+  ::-webkit-scrollbar 
+    width 0 !important 
+  -ms-overflow-style none
+  overflow -moz-scrollbars-none
+  
 
 body
   margin 0
@@ -22,16 +27,16 @@ body
   font: f.copy1
   transform-style preserve-3d
   overflow-y scroll
+  overflow-x hidden
 
 #container
+  margin 0
+  padding 0
   height 100%
-  overflow hidden
-  overflow-y scroll
+  overflow-x hidden
   perspective 1px
-  transform-style inherit
+  transform-style preserve-3d
   position relative
-
-
 
 
 
