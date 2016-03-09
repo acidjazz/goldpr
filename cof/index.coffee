@@ -86,6 +86,7 @@ Index =
         if Index.cache.window.width() > 1000
           if jel.hasClass 'laxin_vert'
             val = Math.round(diff)
+            #val = Math.round(diff)
             if Index.vals?[i] isnt val*3
               jel.find('.inner:first').css 'transform', "translate3d(0, #{val*3}px, 0px)"
               jel.find('.overlay').css 'transform', "translate3d(0, #{val*2}px, 0px)"

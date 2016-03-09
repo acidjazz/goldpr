@@ -1,3 +1,61 @@
+
 footer
-  desktop()
-  height 100px
+  background-color: c.red1
+  > .inner
+    desktop()
+    padding 100px 50px 150px 50px
+    > .section
+      width 33%
+      float left
+      text-align center
+      > .socials
+        display inline-block
+        > .social
+          display inline-block
+          width 20px
+          height 20px
+          background-color: c.black1
+          padding 10px
+          margin 0 5px
+          border-radius 50%
+          &:hover
+            > svg
+              fill: c.blue1
+          > svg
+            fill: c.red1
+            transition fill 0.2s linear
+      > .inquiries
+        text-align left
+        color: c.white1
+        > .copy
+          padding 0 0 10px 0
+          text-transform uppercase
+          font: f.copy2
+        > .email
+          text-decoration none
+          color: c.white1
+          transition color 0.2s linear
+          &:hover
+            color: c.blue1
+      > .copyright
+        text-align left
+        color: c.white1
+        font: f.copy2
+        text-transform uppercase
+        margin 27px 0 0 0
+
+
+@media all and (min-width: 1px) and (max-width: 1000px)
+  footer
+    > .inner
+      padding 40px 20px
+      > .section
+        width 100%
+        float none
+        margin 0 0 20px 0
+        > .inquiries
+          text-align center
+        > .copyright
+          text-align center
+
+
