@@ -3,6 +3,8 @@ copy1: 16px gotham light
 copy2: 16px gotham medium
 copy3: 14px gotham light
 copy4: 20px gotham bold
+copy5: 12px gotham light
+copy6: 14px gotham medium
 h1: 40px neutratext bold
 h2: 20px neutratext demi
 h3: 30px gotham light

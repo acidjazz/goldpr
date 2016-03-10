@@ -33,7 +33,7 @@
     background-size cover
   > .overlay
     position absolute
-    font: f.h3
+    font: f.h2
     padding 25px
     letter-spacing 1px
     &.wider
@@ -54,17 +54,18 @@
       top 40%
       right 0
     &.centered
-      font: f.h2
+      font: f.copy1
+      line-height 25px
       top 50%
       left 50%
       margin-top -126px
       margin-left -197px
       text-align center
     &.gold
-      background-color: rgba(c.white2, 0.9)
+      background-color: rgba(c.white2, 0.95)
       color: c.gold1
     &.red
-      background-color: rgba(c.red1, 0.9)
+      background-color: rgba(c.red1, 0.95)
       color: c.white1
       > .inner > .title
         color: c.white1
@@ -101,22 +102,32 @@
     display inline
   &.sub
     color: c.red1
-    text-decoration underline
     font: f.h5
+  &.morebot
+    padding 20px 0 40px 0
 
 .copy
   max-width 900px
   margin auto
   padding 20px 50px
   line-height 25px
+  letter-spacing 1px
+  &.shorter
+    max-width 700px
+  &.large, > .large
+    font: f.h3
+  &.largeb, > .largeb
+    font: f.h4
   &.medium, > .medium
     font: f.copy2
-  > .medium
+  > .medium, > .large, > .largeb
     display inline
   &.upper
     text-transform uppercase
   &.center
     text-align center
+  &.gold, > .gold
+    color: c.gold1
   &.nobotpad
     padding 20px 50px 0 50px
   &.notoppad
@@ -133,8 +144,11 @@ a.link
 .xing
   text-align center
   color: c.red1
-  letter-spacing 10px
-  font-size 20px
+  > svg
+    width 150px
+    height 30px
+    > g
+      fill: c.red1
 
 .svgstroke
   fill none
@@ -157,10 +171,10 @@ a.link
       margin auto
       padding 0 0 20px 0
       border-bottom: 2px solid c.gold1
-      &.at > svg > g > path
+      &.at > svg > g > g > path
         fill: c.red1
     > .copy
-      padding 30px 50px
+      padding 30px 20px
       line-height 25px
 
 
@@ -181,6 +195,7 @@ for num in 1..3
 
 
 .cta
+  display block
   font: f.h2
   padding 25px
   letter-spacing 1px
@@ -190,6 +205,7 @@ for num in 1..3
   text-align center
   text-transform uppercase
   margin 20px auto
+  text-decoration none
 
 .steps
   width 900px
@@ -198,14 +214,24 @@ for num in 1..3
     width 50%
     &.left
       float left
+      margin 0 0 50px 0
+      > .copy
+        padding 0 100px 0 0
+      > .number
+        margin 0 150px 0 0
     &.right
       float right
-      margin 100px 0 0 0
+      margin 50px 0 0 0
+      > .copy
+        padding 0 0 0 100px
+      > .title
+        padding 0 0 0 100px
+      > .number
+        margin 0 50px 0 0
     > .number
       font: f.h6
       color: c.blue1
       text-align right
-      margin 0 150px 0 0
     > .title
       text-align left
       padding 0
@@ -213,7 +239,7 @@ for num in 1..3
       margin -240px 0 0 0
       transform translateZ(0)
     > .copy
-      padding 0 100px 0 0
+      padding 0 0 0 0
       transform translateZ(0)
 
 .steps > .step.off
@@ -247,9 +273,11 @@ for num in 1..3
       color: c.red1
       padding 0 0 10px 0
       font: f.h5
-    > .copy
+    > .xing
       padding 0 0 20px 0
+    > .copy
       text-align center
+      padding 0 20px 20px 20px
     &:nth-child(5) > .title
         -webkit-column-break-before always
 
@@ -274,14 +302,19 @@ for num in 1..2
   > .listing
     > .title
       padding 10px 0 10px 0
-      color: c.black1
-      font: f.copy1
+      color: c.black3
+      font: f.copy6
       text-align left
     > .copy
       padding 0
-      font: f.copy3
-    &:nth-child(3) > .title
+      font: f.copy5
+      line-height 20px
+    &:nth-child(4) > .title
+    &:nth-child(6) > .title
       -webkit-column-break-before always
+
+.listings_pr > .listing:nth-child(3) > .title
+  -webkit-column-break-before always
 
 .teamlist
   width 900px
@@ -298,33 +331,58 @@ for num in 1..2
       background-position 100% 0%
       background-repeat no-repeat
       background-color: c.blue1
+    &:hover > .copy
+      opacity 1
+      > .name
+        opacity 1
+      > .position
+        opacity 1
+      > .email
+        opacity 1
     > .copy
+      transition opacity 0.2s linear 0s
+      opacity 0
       position absolute
       bottom 10%
       left 5%
-      background-color: rgba(c.white2, 0.9)
-      color: c.gold1
-      width 70%
+      background-color: rgba(c.white2, 1)
+      color: c.red1
+      width 80%
       padding 10px
       text-align right
-      > .position
-        font: f.copy1
+      overflow hidden
+      > .name
+        padding 0 0 5px 0
+        font: f.copy2
+        opacity 0
+        transition opacity 0.2s linear 0.1s
       > .position
         font: f.copy3
-
+        padding 0 0 5px 0
+        opacity 0
+        transition opacity 0.2s linear 0.2s
+      > .email
+        display block
+        font: f.copy3
+        padding 0 0 5px 0
+        color: c.red1
+        text-decoration: none
+        opacity 0
+        transition opacity 0.2s linear 0.3s
+/*
 .teamlist > .member.off
   opacity 0
   transition opacity 0.2s linear 2s, transform 0.2s linear 2s
   transform translate(0, -20px)
 .teamlist > .member.on
   opacity 1
-  transition opacity 0.2s linear 0s, transform 0.2s linear 0s
+  tranition opacity 0.2s linear 0s, transform 0.2s linear 0s
   transform translate(0, 0)
 
 for num in 1..3
   .teamlist > .member:nth-child(3n+{num})
     transition-delay unit(num*0.1, 's')
-
+*/
 
 .clientlist
   width 900px
@@ -357,6 +415,7 @@ for num in 1..3
       > .title
         padding 0 0 10px 0
         color: c.white1
+        font: f.h5
       > .type
         color: c.white1
  
