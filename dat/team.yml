@@ -8,61 +8,13 @@
   position: Business Lead, Strategy
   email: akemp@goldpr.com
 -
-  name: Allison Hinojosa
-  position: CFO
-  email: ahinojosa@goldpr.com
--
-  name: Ashley Cline
-  position: Social Media Strategist
-  email: acline@goldpr.com
--
-  name: Brianna Jonsson
-  position: Social Media Community Manager
-  email: bjonsson@goldpr.com
--
-  name: Cameron Jonsson
-  position: Digital Strategist
-  email: cjonsson@goldpr.com
--
-  name: Diana Mann
-  position: Account Director
-  email: dmann@goldpr.com
--
-  name: Diana Moeck
-  position: Analytics/Account Support
-  email: dmoeck@goldpr.com
+  name: Stephanie Goddard
+  position: Business Lead, Strategy
+  email: sgoddard@goldpr.com
 -
   name: Jackie Jorge
   position: Media Strategist
   email: jjorge@goldpr.com
--
-  name: Jami Eidsvold
-  position: Social Media Business Lead
-  email: jeidsvold@goldpr.com
--
-  name: Jamie Dadant
-  position: Social Consumer<br /> Customer Service
-  email: jdadant@goldpr.com
--
-  name: Jill Edgeworth
-  position: Account Director
-  email: jedgeworth@goldpr.com
--
-  name: Kellie Arens
-  position: Social Media Acct Manager
-  email: karens@goldpr.com
--
-  name: Kris Ellenberg
-  position: Entertainment Lead
-  email: kellenberg@goldpr.com
--
-  name: Kym Cleveland
-  position: Account Coordinator
-  email: kcleveland@goldpr.com
--
-  name: Lauren Cowles
-  position: Digital/Social Strategist
-  email: lcowles@goldpr.com
 -
   name: Sara Record
   position: Blogger/Influencer Relations
@@ -72,22 +24,70 @@
   position: Media strategist
   email: sscott@goldpr.com
 -
-  name: Stephanie Goddard
-  position: Business Lead, Strategy
-  email: sgoddard@goldpr.com
+  name: Shannon Smith
+  position: Media strategist
+  email: ssmith@goldpr.com
 -
   name: Pam Schlichter
   position: Media Relations
   email: Pschlichter@goldpr.com
 -
-  name: Shannon Smith
-  position: Media strategist
-  email: ssmith@goldpr.com
+  name: Diana Mann
+  position: Account Director
+  email: dmann@goldpr.com
 -
-  name: Melissa Angert
-  position: Social Media Strategist
-  email: mangert@goldpr.com
+  name: Jill Edgeworth
+  position: Account Director
+  email: jedgeworth@goldpr.com
+-
+  name: Kris Ellenberg
+  position: Entertainment Lead
+  email: kellenberg@goldpr.com
 ###-
 ###  name: Mariesa Kemble
 ###  position: Media Relations
 ###  email: mkemble@goldpr.com
+-
+  name: Diana Moeck
+  position: Analytics/Account Support
+  email: dmoeck@goldpr.com
+-
+  name: Kym Cleveland
+  position: Account Coordinator
+  email: kcleveland@goldpr.com
+-
+  name: Jami Eidsvold
+  position: Social Media Business Lead
+  email: jeidsvold@goldpr.com
+-
+  name: Ashley Cline
+  position: Social Media Strategist
+  email: acline@goldpr.com
+-
+  name: Kellie Arens
+  position: Social Media Acct Manager
+  email: karens@goldpr.com
+-
+  name: Jamie Dadant
+  position: Social Consumer Customer Service
+  email: jdadant@goldpr.com
+-
+  name: Brianna Jonsson
+  position: Social Media Community Manager
+  email: bjonsson@goldpr.com
+-
+  name: Cameron Jonsson
+  position: Digital Strategist
+  email: cjonsson@goldpr.com
+-
+  name: Lauren Cowles
+  position: Digital/Social Strategist
+  email: lcowles@goldpr.com
+-
+  name: Melissa Angert
+  position: Social Media Strategist
+  email: mangert@goldpr.com
+-
+  name: Allison Hinojosa
+  position: CFO
+  email: ahinojosa@goldpr.com

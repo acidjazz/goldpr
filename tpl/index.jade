@@ -242,7 +242,7 @@ block content
   .teamlist
     each member, index in data.team
       .member
-        .inner(style="background-image: url(/img/team/#{index+1}.jpg)")
+        .inner(style="background-image: url(/img/team/#{member.name.replace(/\s/g, '').toLowerCase()}.jpg)")
         .copy
           .name=member.name 
           .position !{member.position}
