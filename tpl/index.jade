@@ -13,7 +13,7 @@ block content
   .copy.center GOLD PR is a data-driven public relations and social media marketing agency that delivers unrivaled results for today’s emerging and market-leading health & wellness, beauty, medical, technology, automotive, food & beverage companies. 
   .xing
     include ../pub/svg/divider1.svg
-  .copy.center We are an independently-owned firm with boutique quality service and global agency results and resources. We are founded on the belief that size does matter. We deliver extraordinary results for our clients without the layers and subsequent costs of big agencies.  Our thinking is different and unencumbered by traditional agency boundaries. We are relentless about results and uncompromising with our standards.  This translates into growth for your business. 
+  .copy.center We are an independently-owned firm with boutique quality service and global agency results and resources. We were founded on the belief that size does matter. We deliver extraordinary results for our clients without the layers and subsequent costs of big agencies.  Our thinking is different and unencumbered by traditional agency boundaries. We are relentless about results and uncompromising with our standards.  This translates into growth for your business. 
   
   .dblreds.bot
 
@@ -245,7 +245,7 @@ block content
         .inner(style="background-image: url(/img/team/#{index+1}.jpg)")
         .copy
           .name=member.name 
-          .position=member.position
+          .position !{member.position}
           a.email(href="mailto:#{member.email}")=member.email
     .clear
 
@@ -257,13 +257,13 @@ block content
   .dblreds.top
   .title.morebot clients
 
-  .copy.center A few clients from our past & present
+  .copy.center.medium.gold.upper A few clients from our past + present
   .copy.center An agency is the sum total of its people and their collective experience.  Our team has served a wide range of clients over the years, both here at GOLD PR and in previous lives.
 
   .clientlist
-    each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+    each client in data.clients
       .client
-        .inner(style="background-image: url(/img/clients/#{i}.jpg)")
+        .inner(style="background-image: url(/img/clients/#{client}.jpg)")
     .clear
 
   .dblreds.bot
