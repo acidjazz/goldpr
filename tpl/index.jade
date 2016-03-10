@@ -277,10 +277,13 @@ block content
 
   .studies
     each study, key in data.studies
-      a.study(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_new")
+      .study
         .inner
-          .title=study.name
+          a.title(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_new")=study.name
           .type=study.type
+          if study.video
+            .video
+              include ../pub/svg/videocamera.svg
     .clear
 
   .dblreds.bot
