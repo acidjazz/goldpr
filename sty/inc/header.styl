@@ -27,14 +27,33 @@ header
         transition background-color 0.2s linear
         text-decoration none
         animation cellOutY 0.2s 0.2s ease-in both
+        position relative
         for num in 1..6
           &:nth-child({num})
             animation-delay unit(num*0.1 + 0.2, 's')
         &:hover
           border-bottom: 2px solid c.blue1
-        &.on
+        &.on > .bg
           background-color: c.blue1
+          width 100%
+          left 0
+        &.on > .label
           color: c.white1
+        > .bg
+          top 0
+          position absolute
+          width 0%
+          left 50%
+          height 100%
+          z-index 5
+          transition width 0.4s linear, left 0.4s linear
+          transition-timing-function: cubic-bezier(.87,-.41,.19,1.44)
+        > .label
+          position relative
+          text-align center
+          z-index 10
+          transition color 0.2s linear 0.1s
+          color: c.gold1
 
 
 header#sticky

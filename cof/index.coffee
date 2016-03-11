@@ -1,6 +1,7 @@
 Index =
 
   vals: []
+  section: 'home'
   cache:
     window: window
     stickied: false
@@ -16,9 +17,7 @@ Index =
 
     Index.laxcache()
     setInterval Index.check, 20
-
-    if location.hash isnt ''
-      _.on ".option_#{location.hash.replace('#','')}"
+    setInterval Index.menu, 500
 
     Index.handlers()
 
@@ -33,20 +32,18 @@ Index =
   burger: ->
     _.swap '.mobile, .burger, .burger > .inner > .menu'
 
-  option:(event) ->
+  option: (event) ->
 
     event.preventDefault()
 
     hash = $(this).data 'anchor'
     _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
     _.off '.mobile, .burger'
-    _.on ".option_#{hash}"
     setTimeout ->
       $('html, body').scrollTo "##{hash}",
         duration: 50
         offset: -60
       location.hash = hash
-      _.off '.mobile > .inner > .menu > .option'
     , 200
 
   header: ->
@@ -61,13 +58,30 @@ Index =
       _.off '#sticky'
       Index.cache.stickied = off
 
+  menu: ->
+
+    $('.section').each (i, el) ->
+      section = $(el).data 'section'
+      if Index.inViewport el
+        _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
+        _.on ".option_#{section}"
+
+        node = $( '#' + section )
+        if ( node.length )
+          node.attr( 'id', '' )
+        document.location.hash = section
+        if ( node.length ) 
+          node.attr( 'id', section )
+
+
+        location.hash = section
+        return true
+
   laxcache: ->
     $('.laxin').each (i, el) ->
       Index.cache.laxin[i] = el
 
   check: ->
-
-
     #$('.laxin').each (i, el) ->
     for i, el of Index.cache.laxin
 
