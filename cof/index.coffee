@@ -65,16 +65,15 @@ Index =
       if Index.inViewport el
         _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
         _.on ".option_#{section}"
+        
 
-        node = $( '#' + section )
-        if ( node.length )
-          node.attr( 'id', '' )
-        document.location.hash = section
-        if ( node.length )
-          node.attr( 'id', section )
-
-
-        location.hash = section
+        #node = $( '#' + section )
+        #if ( node.length )
+        #  node.attr( 'id', '' )
+        #document.location.hash = section
+        #if ( node.length )
+        #  node.attr( 'id', section )
+        #location.hash = section
         return true
 
   laxcache: ->
