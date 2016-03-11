@@ -30,19 +30,12 @@ html(lang='en')
         "@type": "Place",
         "url": "#{data.meta.url}",
         "logo": "#{data.meta.url}#{data.meta.image}",
-        "telephone": "+1#{data.social.phone}",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "295 Kansas Street",
-          "addressLocality": "San Francisco",
-          "addressRegion": "CA",
-          "postalCode": "94122",
-          "addressCountry": "US"
+        "telephone": "+1#{data.social.phone}"
         },
         "sameAs" : [
           "#{data.social.instagram}",
           "#{data.social.facebook}",
-          "#{data.social.pinterest}"
+          "#{data.social.twitter}"
         ]
       }
 
