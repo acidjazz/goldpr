@@ -70,7 +70,7 @@ Index =
         if ( node.length )
           node.attr( 'id', '' )
         document.location.hash = section
-        if ( node.length ) 
+        if ( node.length )
           node.attr( 'id', section )
 
 
