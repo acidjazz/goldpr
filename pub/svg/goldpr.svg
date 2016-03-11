@@ -35,7 +35,7 @@
 		<clipPath id="SVGID_2_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<path id="blueCircle" class="st0" d="M122.7,81c0,32.5-26.4,58.9-58.9,58.9c-32.5,0-58.9-26.4-58.9-58.9s26.4-58.9,58.9-58.9
+		<path class="blueCircle st0" d="M122.7,81c0,32.5-26.4,58.9-58.9,58.9c-32.5,0-58.9-26.4-58.9-58.9s26.4-58.9,58.9-58.9
 			S122.7,48.5,122.7,81"/>
 	</g>
 	<g>

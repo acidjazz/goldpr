@@ -2,6 +2,7 @@ Index =
 
   vals: []
   section: 'home'
+  vis: false
   cache:
     window: window
     stickied: false
@@ -10,6 +11,9 @@ Index =
   i: ->
 
     Index.cache.window = $(window)
+    if document.visibilityState isnt undefined
+      Index.vis = document.visibilityState
+      setInterval Index.visible, 200
 
 
     if Index.cache.window.width() > 1000
@@ -20,6 +24,15 @@ Index =
     setInterval Index.menu, 500
 
     Index.handlers()
+
+
+  visible: ->
+    if Index.vis isnt document.visibilityState
+      Index.vis = document.visibilityState
+      _.off '.blueCircle'
+      setTimeout ->
+        _.on '.blueCircle'
+      , 10
 
   handlers: ->
 
