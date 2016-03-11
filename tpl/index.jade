@@ -165,10 +165,10 @@ block content
       each study, key in data.studies
         .study
           .inner
-            a.title(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_new")=study.name
+            a.title(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_blank")=study.name
             .type=study.type
             if study.video
-              a.video(href="#{study.video}",targt="_new")
+              a.video(href="#{study.video}",target="_blank")
                 include ../pub/svg/videocamera.svg
       .clear
 
