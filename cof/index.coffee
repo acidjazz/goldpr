@@ -20,7 +20,7 @@ Index =
       setInterval Index.header, 50
 
     Index.laxcache()
-    setInterval Index.check, 20
+    setInterval Index.check, 100
     setInterval Index.menu, 500
 
     Index.handlers()
@@ -61,7 +61,7 @@ Index =
 
   header: ->
 
-    stickySpot = 200
+    stickySpot = 300
 
     if Index.cache.window.scrollTop() > stickySpot and Index.cache.stickied is false
       _.on '#sticky'
@@ -78,15 +78,6 @@ Index =
       if Index.inViewport el
         _.off 'header > .inner > .menu > .option, .mobile > .inner > .menu > .option'
         _.on ".option_#{section}"
-        
-
-        #node = $( '#' + section )
-        #if ( node.length )
-        #  node.attr( 'id', '' )
-        #document.location.hash = section
-        #if ( node.length )
-        #  node.attr( 'id', section )
-        #location.hash = section
         return true
 
   laxcache: ->
@@ -94,7 +85,6 @@ Index =
       Index.cache.laxin[i] = el
 
   check: ->
-    #$('.laxin').each (i, el) ->
     for i, el of Index.cache.laxin
 
       if Index.inViewport el
@@ -109,6 +99,7 @@ Index =
         if perc < thresh and jel.hasClass 'on'
           _.off jel
 
+        ###
         if Index.cache.window.width() > 1000
           if jel.hasClass 'laxin_vert'
             val = Math.round(diff)
@@ -118,6 +109,7 @@ Index =
               jel.find('.overlay').css 'transform', "translate3d(0, #{val*2}px, 0px)"
               jel.find('.overlay > .inner').css 'transform', "translate3d(0, #{val/5}px, 0px)"
               Index.vals[i] = val*3
+        ###
    
   inViewport: (el) ->
 
