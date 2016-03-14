@@ -44,7 +44,7 @@ gulp.task('vendors', function() {
 
   gulp.src([
     'bower_components/jquery/dist/jquery.js',
-    'bower_components/jquery.scrollTo/jquery.scrollTo.js',
+    'bower_components/jquery.scrollTo/jquery.scrollTo.min.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(uglify())

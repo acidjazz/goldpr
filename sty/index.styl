@@ -180,24 +180,6 @@ a.link
     > .copy
       padding 30px 20px
       line-height 25px
-
-
-.sections > .section.off
-  opacity 0
-  transition opacity 0.2s linear 0.2s, transform 0.2s linear 0.2s
-.sections > .section.on
-  opacity 1
-  transform translate(0, 0)
-  transition opacity 0.2s linear 0s, transform 0.2s linear 0s
-
-.sections > .section.off
-  transform translate(-20px, 0)
-
-for num in 1..3
-  .sections > .section:nth-child(3n+{num})
-    transition-delay unit(num*0.1, 's')
-
-
 .cta
   display block
   font: f.h2
@@ -452,12 +434,16 @@ for num in 1..3
       transition-delay 0s !important
       > .copy
         padding 10px 10px 50px 10px
+  .cta
+    width 90%
+    padding 25px 0
   .steps
-    width 100%
+    width auto
     > .step
-      width 90%
-      margin 5% !important
+      width 80%
+      padding 5% !important
       float none !important
+      margin 0 !important
       > .number
         margin 0 !important
       > .copy
