@@ -1,7 +1,6 @@
 _ =
 
   console: false
-  repo: 'http://www.github.com/acidjazz/goldpr'
 
   off: (el) ->
     i = 0
@@ -79,7 +78,7 @@ _ =
 
       :: syntactic sugar by 256
       :: http://256.sh/
-      :: #{_.repo}
+      :: #{data.repo}
     """
 
     console.log ascii, "color: grey; font-family: Menlo, monospace;"

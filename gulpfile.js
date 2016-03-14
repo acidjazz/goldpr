@@ -55,6 +55,9 @@ gulp.task('vendors', function() {
 });
 
 gulp.task('coffee', function() {
+
+  fs.writeFileSync('pub/jst/data.js', "var data = " + JSON.stringify(data) + ";", 'utf8')
+
   gulp.src('cof/**/*.coffee')
     .pipe(sourcemaps.init())
     .pipe(coffee({bare: true})
@@ -117,7 +120,7 @@ gulp.task('sync', function() {
   });
 
   gulp.watch('dat/**/*', ['objectus','stylus','jade']);
-  gulp.watch('cof/**/*.coffee', ['coffee']);
+  gulp.watch('cof/**/*.coffee', ['objectus', 'coffee']);
   gulp.watch('sty/**/*.styl', ['stylus']);
   gulp.watch('tpl/**/*.jade', ['jade']);
   gulp.watch('pub/svg/**/*.svg', ['jade']);
