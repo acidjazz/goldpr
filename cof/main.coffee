@@ -77,8 +77,8 @@ _ =
       mmm/............................................................./mmm
 
       :: syntactic sugar by 256
-      :: http://256.sh/
-      :: #{data.repo}
+      :: http://256.io/
+      :: #{data.meta.repo}
     """
 
     console.log ascii, "color: grey; font-family: Menlo, monospace;"
