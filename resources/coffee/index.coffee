@@ -9,6 +9,7 @@ Index =
     laxin: {}
 
   i: ->
+    
 
     Index.cache.window = $(window)
     if document.visibilityState isnt undefined
@@ -24,6 +25,7 @@ Index =
     setInterval Index.menu, 500
 
     Index.handlers()
+    console.log 'Index.i()'
 
 
   visible: ->
@@ -133,3 +135,4 @@ Index =
     nonabs = -nonabs if diff < 0
 
     return [perc, nonabs]
+

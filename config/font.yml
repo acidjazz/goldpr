@@ -1,0 +1,42 @@
+---
+
+copy1:
+  font-family: gotham light
+  font-size: 16px
+copy2:
+  font-family: gotham medium
+  font-size: 16px
+copy3:
+  font-family: gotham light
+  font-size: 14px
+copy4:
+  font-family: gotham bold
+  font-size: 20px
+copy5: 
+  font-family: gotham light
+  font-size: 12px
+copy6:
+  font-family: gotham medium
+  font-size: 14px
+copy7: 
+  font-family: gotham bold
+  font-size: 12px
+
+h1:
+  font-family: neutratext bold
+  font-size: 40px
+h2: 
+  font-family: neutratext demi
+  font-size: 20px
+h3: 
+  font-family: gotham light
+  font-size: 30px
+h4:
+  font-family: gotham bold 
+  font-size: 30px
+h5:
+  font-family: gotham light
+  font-size: 20px
+h6:
+  font-family: gotham book 
+  font-size: 300px

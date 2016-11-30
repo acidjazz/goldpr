@@ -1,4 +1,4 @@
-extends inc/layout
+extends extend/layout
 
 block content
   .section(data-section='home')
@@ -13,7 +13,7 @@ block content
 
   .copy.center GOLD PR is a data-driven public relations and social media marketing agency that delivers unrivaled results for today’s emerging and market-leading health & wellness, beauty, medical, technology, automotive, food & beverage companies. 
   .xing
-    include ../pub/svg/divider1.svg
+    include ../vector/divider1.svg
   .copy.center We are an independently-owned firm with boutique quality service and global agency results and resources. We were founded on the belief that size does matter. We deliver extraordinary results for our clients without the layers and subsequent costs of big agencies.  Our thinking is different and unencumbered by traditional agency boundaries. We are relentless about results and uncompromising with our standards.  This translates into growth for your business. 
   
   .dblreds.bot
@@ -37,29 +37,29 @@ block content
     .standouts
       .standout.laxin.off(data-thresh=10)
         .thumbnail
-          include ../pub/svg/chat.svg
+          include ../vector/chat.svg
         .copy We have experience working with both consumer brands and business to business and do both very well. 
       .standout.laxin.off(data-thresh=10)
         .thumbnail
-          include ../pub/svg/female.svg
+          include ../vector/female.svg
         .copy We get women. We understand how the female consumer thinks, feels, processes information and connects with others. We know what influences her purchase behavior and how she comes to trust a brand.
       .standout.laxin.off(data-thresh=10)
         .thumbnail
-          include ../pub/svg/doc.svg
+          include ../vector/doc.svg
         .copy Marketing in highly regulated environments is our forte. As specialists in aesthetics, medical device and pharma, we’ve pioneered PR and social media best practices for some of the largest brands in these categories.
       .standout.laxin.off(data-thresh=10)
         .thumbnail
-          include ../pub/svg/cap.svg
+          include ../vector/cap.svg
         //.copy The best marketing campaigns put experience first. We’ve pioneered experiential marketing with media, influencers and consumers in the aesthetics and beauty categories. We get the impact of UGC, endorsement and brand advocacy on a brand’s image and bottom line.
         .copy Today’s youth are very savvy and will close out a brand’s ability to reach them if the approach isn’t creative, authentic and personal. GOLD PR has extensive experience making an impression on young consumers, turning them into the drivers of sales and the brand’s best advocates.
         
       .standout.laxin.off(data-thresh=10)
         .thumbnail.at
-          include ../pub/svg/at.svg
+          include ../vector/at.svg
         .copy Social media is a core competency. Our entire social team was “born digital.” They are social natives operating in a PR world. This collaborative thinking goes into every campaign we create.
       .standout.laxin.off(data-thresh=10)
         .thumbnail
-          include ../pub/svg/reward.svg
+          include ../vector/reward.svg
         .copy We are selective about our clients. We don’t represent just anyone and everyone. We are honest about a client’s fit with us, as well as our fit with them, to ensure long-standing, mutually rewarding relationships. 
       .clear
 
@@ -71,7 +71,7 @@ block content
     .copy.medium.upper.center.gold Everything we do is rooted in data + insights + innovative content + measurement
     .copy.notoppad.center GOLD PR looks at the entire marketing mix holistically to create the foundation of each client strategy. We’ve always practiced integrated marketing. It’s more than a buzz word to us.  The caliber of our team and rigorous content development process brings our clients’ stories to market in the most impactful way. Our planning, execution and measurement methodology uses channels of paid, earned, shared and owned media to help our clients reach their customers where they are consuming information in a meaningful, compelling and targeted way.			
     .xing 
-      include ../pub/svg/divider1.svg
+      include ../vector/divider1.svg
     .steps
       .step.left.laxin.off(data-thresh=30)
         .number 1
@@ -112,44 +112,44 @@ block content
         .title RESPECT
         .copy We believe collaboration and listening is key to any successful partnership - with each other, with clients and client partner agencies. Respect builds trust and trust leads to a culture of open-minded acceptance, honesty and respect 100% of the time. 
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .value
         .title COMMITMENT
         .copy We believe in going the extra mile because it’s not crowded there. We think that bringing ideas, solutions and support before a client asks is essential. We treat our clients’ reputation, projects and budget as if they were our own. We work tirelessly to protect every brand’s marketing investment and ensure winning outcomes.
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .value
         .title INNOVATION
         .copy We treat every new challenge as an opportunity to break through the traditional mold with creative thinking. We help brands craft their innovation into stories that build a solid foundation for market leadership and growth.
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .value
         .title EVOLVE
         .copy Change is constant. We embrace it. And we adapt. Our entrepreneurial approach and agility allows us to shift gears and instantly evolve with changes in client organizations, market conditions, media landscape, technology and trends. 
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
 
       .value
         .title EXCEED
         .copy We believe in real insights, analytics and most importantly, return on investment. We are relentlessly in pursuit of organizational results that impact our clients’ bottom line. We love to see our work  disrupt thinking, perception and markets. We strive to exceed expectations.
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
 
       .value
         .title COLLABORATION
         .copy We enjoy collaborative partnerships with our clients and their other partners – founded on the belief that to be successful – we need to work together to find innovative approaches to everyday communication needs. The best collaborations create something bigger than the sum of what we could create on our own and always results in more successful outcomes. 
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .value
         .title TALENT
         .copy We hire it. Retain it. Reward it. Cultivate it. Over 50 percent of our team has been with us for half a decade or more. And they bring their friends. 
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .value
         .title FUN.
         .copy We believe that happier people do better work and that you should love what you do and who you do it with. We do. 
         .xing
-          include ../pub/svg/divider1.svg
+          include ../vector/divider1.svg
       .clear
             
     .dblreds.bot
@@ -163,17 +163,17 @@ block content
 
 
     .studies
-      each study, key in data.studies
+      each study, key in config.studies
         .study
           .inner
             a.title(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_blank")=study.name
             .type=study.type
             if study.video
               a.video(href="#{study.video}",target="_blank")
-                include ../pub/svg/videocamera.svg
+                include ../vector/videocamera.svg
       .clear
       a(href='http://www.odwyerpr.com/pr_firm_rankings/independents.htm',target='_blank')  
-        img.odwyers(src='/img/odwyers.jpg')
+        img.odwyers(src='/images/odwyers.jpg')
 
     .dblreds.bot
 
@@ -190,7 +190,7 @@ block content
     .copy.center We help our clients navigate a complex marketing and communications landscape. We create compelling strategic narratives, develop attention-grabbing content, and amplify through PR, social, and digital channels ~ all while measuring effectiveness with market-leading analytics. 
 
     .xing 
-      include ../pub/svg/divider1.svg
+      include ../vector/divider1.svg
 
     .title.sub public relations
 
@@ -206,6 +206,20 @@ block content
         .copy Influencer & Ambassador programs
         //.copy Content creations
       .listing
+        .title Communications training
+        .copy Marketing to Millenials
+        .copy Marketing to 50+
+        .copy Healthcare provider marketing
+        .copy Engaging Gen Z
+        .copy Content brand integrations
+      .listing
+        .title ENTERTAINMENT MEDIA PARTNERSHIPS
+        //.copy Brand media campaigns
+        .copy Product placement & brand integrations
+        .copy Celebrity program development & execution
+        .copy Sponsorship strategy & activation
+
+      .listing
         .title CORPORATE COMMUNICATIONS
         .copy Executive and internal communications 
         .copy Cause marketing & CSR 
@@ -213,12 +227,6 @@ block content
         .copy Community relations
         .copy Advocacy relations
         .copy Media training
-      .listing
-        .title ENTERTAINMENT MEDIA PARTNERSHIPS
-        //.copy Brand media campaigns
-        .copy Product placement & brand integrations
-        .copy Celebrity program development & execution
-        .copy Sponsorship strategy & activation
 
     .title.sub social media
 
@@ -261,13 +269,13 @@ block content
     .copy.center We are corporate communications refugees and former large agency executives. We come from varied backgrounds and have chosen to work in an entrepreneurial environment committed to highly personalized client engagement. 
 
     .teamlist
-      each member, index in data.team
+      each member, index in config.team
         .member
-          .inner(style="background-image: url(/img/team/#{member.name.replace(/\s/g, '').toLowerCase()}.jpg)")
+          .inner(style="background-image: url(/images/team/" + member.name.replace(/\s/g, '').toLowerCase() + ".jpg)")
           .copy
             .name=member.name 
             .position !{member.position}
-            a.email(href="mailto:#{member.email}")=member.email
+            a.email(href="mailto:" + member.email)=member.email
       .clear
     
     .dblreds.bot
@@ -283,9 +291,9 @@ block content
     .copy.center An agency is the sum total of its people and their collective experience.  Our team has served a wide range of clients over the years, both here at GOLD PR and in previous roles.
 
     .clientlist
-      each client in data.clients
+      each client in config.clients
         .client
-          .inner(style="background-image: url(/img/clients/#{client}.jpg)")
+          .inner(style="background-image: url(/images/clients/" + client + ".jpg)")
       .clear
 
     .dblreds.bot
@@ -305,12 +313,12 @@ block content
     a.link(href='tel:9497433911') 949.743.3911
 
     .xing
-      include ../pub/svg/divider1.svg
+      include ../vector/divider1.svg
 
     .copy.center.medium.gold JOIN OUR TEAM
     .copy.center.notoppad.shorter We are always on the lookout for Public Relations and Social Media superstars who have experience, are strategic thinkers and possess the drive and determination to win. If you're interested in joining the dynamic GOLD PR team, please email your resume to <a href="mailto:careers@goldpr.com">careers@goldpr.com</a>.
     
     .dblreds.bot
 
-    script(type='text/javascript').
-      Loader.load('/jst/index.js', 'Index');
+    script.
+      Index.i()

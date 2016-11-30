@@ -1,8 +1,14 @@
- onoff()
+onoff()
   &.on
     display block
   &.off
     display none
+
+fullsize()
+  top 0
+  left 0
+  right 0
+  bottom 0
 
 desktop()
   max-width 1200px
@@ -17,6 +23,12 @@ clearfix()
     clear: both
   zoom: 1 if support-for-ie
 
+gf(k)
+  for key, value in config.font[k]
+    {key} unquote(value)
+
+gc(k)
+  return convert(config.color[k])
 
 fontfaces(dir, fonts, exts)
 

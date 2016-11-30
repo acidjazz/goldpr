@@ -34,7 +34,7 @@ html(lang='en')
     if meta
       title #{meta.title}
     else
-      title #{data.meta.title}
+      title #{config.meta.title}
 
     meta(http-equiv="X-UA-Compatible",content="IE=Edge,chrome=1")
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
@@ -52,31 +52,29 @@ html(lang='en')
       ga('require', 'linkid');
       ga('send', 'pageview');
 
-    script(type='text/javascript', src='/jst/lib/vendor.min.js')
-    script(type='text/javascript', src='/jst/main.js')
-    script(type='text/javascript', src='/jst/data.js')
-    script(type='text/javascript', src='/jst/loader.js')
+    script(type='text/javascript', src='/javascript/vendor.js')
+    script(type='text/javascript', src='/javascript/bundle.js')
 
     //- google
     if meta
       meta(name='description',content=meta.description)
     else
-      meta(name='description',content=data.meta.description)
+      meta(name='description',content=config.meta.description)
 
-    meta(name='keywords',content=data.meta.keywords)
+    meta(name='keywords',content=config.meta.keywords)
 
     script(type='application/ld+json').
       {
         "@context": "http://schema.org",
         "@type": "Organization",
-        "url": "#{data.meta.url}",
-        "logo": "#{data.meta.url}#{data.meta.image}",
-        "telephone": "+1#{data.social.phone}"
+        "url": "#{config.meta.url}",
+        "logo": "#{config.meta.url}#{config.meta.image}",
+        "telephone": "+1#{config.social.phone}"
         },
         "sameAs" : [
-          "#{data.social.instagram}",
-          "#{data.social.facebook}",
-          "#{data.social.twitter}"
+          "#{config.social.instagram}",
+          "#{config.social.facebook}",
+          "#{config.social.twitter}"
         ]
       }
 
@@ -87,10 +85,10 @@ html(lang='en')
       meta(property='og:image',content=meta.image)
       meta(property='og:description',content=meta.description)
     else
-      meta(property='og:url',content=data.meta.url)
-      meta(property='og:title',content=data.meta.title)
-      meta(property='og:image',content=data.meta.url + data.meta.image)
-      meta(property='og:description',content=data.meta.description)
+      meta(property='og:url',content=config.meta.url)
+      meta(property='og:title',content=config.meta.title)
+      meta(property='og:image',content=config.meta.url + config.meta.image)
+      meta(property='og:description',content=config.meta.description)
 
     meta(property='og:type',content='website')
 
@@ -100,11 +98,11 @@ html(lang='en')
     if meta
       meta(name='twitter:title',content=meta.title)
       meta(name='twitter:description',content=meta.description)
-      meta(name='twitter:image',content=data.meta.url + data.meta.image) 
+      meta(name='twitter:image',content=config.meta.url + config.meta.image) 
     else
-      meta(name='twitter:title',content=data.meta.title)
-      meta(name='twitter:description',content=data.meta.description)
-      meta(name='twitter:image',content=data.meta.url + 'img/share.jpg') 
+      meta(name='twitter:title',content=config.meta.title)
+      meta(name='twitter:description',content=config.meta.description)
+      meta(name='twitter:image',content=config.meta.url + 'images/share.jpg') 
 
 
 
@@ -129,8 +127,8 @@ html(lang='en')
     meta(name="theme-color",content="#ee697a")
 
   body
-    include header
+    include ../partial/header
     .container#container
       block content
-    include footer
+    include ../partial/footer
 

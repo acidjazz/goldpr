@@ -1,47 +1,53 @@
 _ =
 
-  console: false
+  i: ->
+    @console = setInterval(@detect.bind(@), 200)
 
-  off: (el) ->
-    i = 0
-    len = arguments.length
+  p:
+    offing: false
+    offtime: 0
 
-    while i isnt len
-      if arguments[i] instanceof jQuery
-        arguments[i].removeClass("on").addClass "off"
-      else
-        $(arguments[i]).removeClass("on").addClass "off"
-      i++
+  turn: (el, remove=false, add=false) ->
+
+    if el not instanceof jQuery
+      el = $(el)
+
+    if remove isnt false
+      el.removeClass(remove)
+
+    if add isnt false
+      el.addClass(add)
+
+    return true
+
+  off: (el, p={}) ->
+
+    if p.offing and p.offtime > 0
+
+      @turn el, false, 'offing'
+      setTimeout ->
+        @turn el, 'offing', false
+        @turn el, 'on', 'off'
+      , p.offtime*1000 + 100
+
+    else
+      @turn el, 'on', 'off'
+
     return
 
-  on: (el) ->
-    i = 0
-    len = arguments.length
+  on: (el, p) ->
+    @turn el, 'off', 'on'
 
-    while i isnt len
-      if arguments[i] instanceof jQuery
-        arguments[i].removeClass("off").addClass "on"
-      else
-        $(arguments[i]).removeClass("off").addClass "on"
-      i++
-    return
+  swap: (el, p) ->
 
-  swap: (el) ->
-    i = 0
-    len = arguments.length
+    if el not instanceof jQuery
+      el = $(el)
 
-    while i isnt len
-      if arguments[i] instanceof jQuery
-        if arguments[i].hasClass 'off'
-          _.on arguments[i]
-        else
-          _.off arguments[i]
-      else
-        if $(arguments[i]).hasClass 'off'
-          _.on $(arguments[i])
-        else
-          _.off $(arguments[i])
-      i++
+    if el.hasClass 'off'
+      @on el, p
+    else
+      @off el, p
+
     return
 
   encode: (str) ->
@@ -55,12 +61,25 @@ _ =
 
   t: (category, action, label, value) ->
     _gaq.push ['_trackEvent', category, action, label, value]
+
   rand: (min, max) ->
     return Math.floor(Math.random() * max) + min
 
+  load: (script, initiate, complete) ->
+
+    el = document.createElement 'script'
+    el.type = 'text/javascript'
+    el.src = script
+    el.addEventListener 'load' , (e) ->
+      complete() if typeof complete is 'function'
+      window[initiate].i() if initiate isnt undefined and initiate isnt false
+    , false
+
+    document.body.appendChild(el)
+
   llc: ->
     ascii = """
-      
+
       %cmmm/............................................................./mmm
       mmo................-:://::-.......-:::::::::::::-........-::///:-.omm
       md-.............:+yhddddddhy+-..../ddddddddddddd+....../shdddddddyodm
@@ -78,15 +97,13 @@ _ =
 
       :: syntactic sugar by 256
       :: http://256.io/
-      :: #{data.meta.repo}
+      :: #{config.meta.repo}
     """
-
     console.log ascii, "color: grey; font-family: Menlo, monospace;"
 
   detect: ->
-    if ((window.outerHeight - window.innerHeight) > 100)
-      _.llc()
-      clearInterval _.console
+    if (((window.outerHeight - window.innerHeight) > 100) || ((window.outerWidth - window.innerWidth) > 100))
+      @llc()
+      clearInterval @console
 
-_.console = setInterval _.detect, 200
-
+_.i()

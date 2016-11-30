@@ -14,7 +14,7 @@ header
     > .menu
       float right
       margin 50px 0 0 0
-      font: f.copy7
+      gf(copy7)
       letter-spacing 1px
       > .option
         cursor pointer
@@ -23,7 +23,7 @@ header
         margin 0 0 0 10px
         text-align center
         text-transform uppercase
-        color: c.gold1
+        color gc(gold1)
         transition background-color 0.2s linear
         text-decoration none
         animation cellOutY 0.2s 0.2s ease-in both
@@ -32,13 +32,13 @@ header
           &:nth-child({num})
             animation-delay unit(num*0.1 + 0.2, 's')
         &:hover
-          border-bottom: 2px solid c.blue1
+          border-bottom 2px solid gc(blue1)
         &.on > .bg
-          background-color: c.blue1
+          background-color gc(blue1)
           width 100%
           left 0
         &.on > .label
-          color: c.white1
+          color gc(white1)
         > .bg
           top 0
           position absolute
@@ -53,7 +53,7 @@ header
           text-align center
           z-index 10
           transition color 0.2s linear 0.1s
-          color: c.gold1
+          color gc(gold1)
 
 
 header#sticky
@@ -62,8 +62,8 @@ header#sticky
   left 0
   right 0
   z-index 100
-  background-color: c.white1
-  border-bottom: 2px solid rgba(c.blue1, 0.8)
+  background-color gc(white1)
+  border-bottom 2px solid rgba(gc(blue1), 0.8)
   animation cellOutY 0.2s 0s ease-in both
   onoff()
   > .inner

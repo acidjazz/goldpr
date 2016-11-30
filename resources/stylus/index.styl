@@ -4,28 +4,28 @@
   position relative
   transform-style inherit
   &.cheers > .inner
-    background-image url(/img/lax/cheers.jpg)
+    background-image url(/images/lax/cheers.jpg)
     background-position 50% 100%
   &.standout > .inner
-    background-image url(/img/lax/standout.jpg)
+    background-image url(/images/lax/standout.jpg)
     background-position 50% 50%
   &.closecheers > .inner
-    background-image url(/img/lax/closecheers.jpg)
+    background-image url(/images/lax/closecheers.jpg)
     background-position 50% 0%
   &.contact > .inner
-    background-image url(/img/lax/contact.jpg)
+    background-image url(/images/lax/contact.jpg)
     background-position 0% 70%
   &.work > .inner
-    background-image url(/img/lax/work.jpg)
+    background-image url(/images/lax/work.jpg)
     background-position 0% 70%
   &.clients > .inner
-    background-image url(/img/lax/clients.jpg)
+    background-image url(/images/lax/clients.jpg)
     background-position 0% 90%
   &.team > .inner
-    background-image url(/img/lax/team.jpg)
+    background-image url(/images/lax/team.jpg)
     background-position 0% 90%
   &.services > .inner
-    background-image url(/img/lax/services.jpg)
+    background-image url(/images/lax/services.jpg)
     background-position 0% 90%
   > .inner
     height 100%
@@ -33,13 +33,13 @@
     background-attachment fixed
   > .overlay
     position absolute
-    font: f.h2
+    gf(h2)
     padding 25px
     letter-spacing 1px
     &.wider
       padding 25px 12vw
     > .title
-      font: f.h1
+      gf(h1)
     > .text
       line-height 30px
     &.upper
@@ -54,7 +54,7 @@
       top 40%
       right 0
     &.centered
-      font: f.copy1
+      gf(copy1)
       line-height 25px
       // 379x195
       top 50%
@@ -63,13 +63,13 @@
       margin-left -189.5px
       text-align center
     &.gold
-      background-color: rgba(c.white2, 0.95)
-      color: c.gold1
+      background-color: rgba(gc(white2), 0.95)
+      color gc(gold1)
     &.red
-      background-color: rgba(c.red1, 0.95)
-      color: c.white1
+      background-color: rgba(gc(red1), 0.95)
+      color gc(white1)
       > .inner > .title
-        color: c.white1
+        color gc(white1)
 
 /*
 .lax.off > .overlay
@@ -81,8 +81,8 @@
 */
 
 .dblreds
-  border-top: 2px solid c.red1
-  border-bottom: 2px solid c.red1
+  border-top: 2px solid gc(red1)
+  border-bottom: 2px solid gc(red1)
   height 10px
   margin 20px 0
   &.top
@@ -93,17 +93,17 @@
     margin 40px 0
 
 .title
-  color: c.gold1
-  font: f.h3
+  color gc(gold1)
+  gf(h3)
   text-transform uppercase
   text-align center
   padding 20px 0
   > .f_h4
-    font: f.h4
+    gf(h4)
     display inline
   &.sub
-    color: c.red1
-    font: f.h5
+    color gc(red1)
+    gf(h5)
   &.morebot
     padding 20px 0 40px 0
 
@@ -114,16 +114,16 @@
   line-height 25px
   letter-spacing 1px
   > a
-    color: c.gold1
+    color gc(gold1)
     text-decoration none
   &.shorter
     max-width 700px
   &.large, > .large
-    font: f.h3
+    gf(h3)
   &.largeb, > .largeb
-    font: f.h4
+    gf(h3)
   &.medium, > .medium
-    font: f.copy2
+    gf(copy2)
   > .medium, > .large, > .largeb
     display inline
   &.upper
@@ -131,7 +131,7 @@
   &.center
     text-align center
   &.gold, > .gold
-    color: c.gold1
+    gc(gold1)
   &.nobotpad
     padding 20px 50px 0 50px
   &.notoppad
@@ -139,24 +139,24 @@
 
 a.link
   display block
-  color: c.red1
-  font: f.copy4
+  color gc(red1)
+  gf(copy4)
   text-align center
   text-decoration none
   margin 0 0 20px 0
 
 .xing
   text-align center
-  color: c.red1
+  color gc(red1)
   > svg
     width 150px
     height 30px
     > g
-      fill: c.red1
+      fill gc(red1)
 
 .svgstroke
   fill none
-  stroke: c.red1
+  stroke gc(red1)
   stroke-width 1.7735
   stroke-linecap round
   stroke-linejoin round
@@ -174,19 +174,19 @@ a.link
       width 30%
       margin auto
       padding 0 0 20px 0
-      border-bottom: 2px solid c.gold1
+      border-bottom: 2px solid gc(gold1)
       &.at > svg > g > g > path
-        fill: c.red1
+        fill gc(red1)
     > .copy
       padding 30px 20px
       line-height 25px
 .cta
   display block
-  font: f.h2
+  gf(h2)
   padding 25px
   letter-spacing 1px
-  background-color: rgba(c.white2, 0.8)
-  color: c.gold1
+  background-color rgba(gc(white2), 0.8)
+  color gc(gold1)
   width 320px
   text-align center
   text-transform uppercase
@@ -215,13 +215,13 @@ a.link
       > .number
         margin 0 50px 0 0
     > .number
-      font: f.h6
-      color: c.blue1
+      gf(h6)
+      color: gc(blue1)
       text-align right
     > .title
       text-align left
       padding 0
-      color: c.red1
+      color: gc(red1)
       margin -240px 0 0 0
       transform translateZ(0)
     > .copy
@@ -256,9 +256,9 @@ a.link
   column-gap 50px
   > .value
     > .title
-      color: c.gold1
+      color gc(gold1)
       padding 0 0 10px 0
-      font: f.h5
+      gf(h5)
     > .xing
       padding 0 0 20px 0
     > .copy
@@ -288,12 +288,12 @@ for num in 1..2
   > .listing
     > .title
       padding 10px 0 10px 0
-      color: c.black3
-      font: f.copy6
+      color gc(black1)
+      gf(copy6)
       text-align left
     > .copy
       padding 0
-      font: f.copy5
+      gf(copy5)
       line-height 20px
     &:nth-child(4) > .title
     &:nth-child(6) > .title
@@ -316,7 +316,7 @@ for num in 1..2
       background-size cover
       background-position 100% 0%
       background-repeat no-repeat
-      background-color: c.blue1
+      background-color gc(blue1)
     &:hover > .copy
       opacity 1
       > .name
@@ -331,27 +331,27 @@ for num in 1..2
       position absolute
       bottom 10%
       left 5%
-      background-color: rgba(c.white2, 1)
-      color: c.red1
+      background-color rgba(gc(white2), 1)
+      color gc(red1)
       width 80%
       padding 10px
       text-align right
       overflow hidden
       > .name
         padding 0 0 5px 0
-        font: f.copy2
+        gf(copy2)
         opacity 0
         transition opacity 0.2s linear 0.1s
       > .position
-        font: f.copy3
+        gf(copy3)
         padding 0 0 5px 0
         opacity 0
         transition opacity 0.2s linear 0.15s
       > .email
         display block
-        font: f.copy3
+        gf(copy3)
         padding 0 0 5px 0
-        color: c.red1
+        color gc(red1)
         text-decoration: none
         opacity 0
         transition opacity 0.2s linear 0.2s
@@ -392,7 +392,7 @@ for num in 1..3
     text-decoration none
     text-align center
     > .inner
-      background-color: c.blue1
+      background-color gc(blue1)
       margin 30px
       padding 15px 12px 10px 10px
       transition background-color 0.1s linear
@@ -403,11 +403,11 @@ for num in 1..3
         margin -20px -10px 0 0
       > .title
         padding 0 0 10px 0
-        color: c.white1
-        font: f.h5
+        color gc(white1)
+        gf(h5)
         text-decoration none
       > .type
-        color: c.white1
+        color gc(white1)
 .odwyers
   display block
   width 150px
