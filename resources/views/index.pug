@@ -169,7 +169,7 @@ block content
             a.title(href="/pdf/CaseStudies/#{key}/#{study.link}",target="_blank")=study.name
             .type=study.type
             if study.video
-              a.video(href="#{study.video}",target="_blank")
+              a.video(href=study.video,target="_blank")
                 include ../vector/videocamera.svg
       .clear
 
