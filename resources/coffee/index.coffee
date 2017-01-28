@@ -9,6 +9,18 @@ Index =
     laxin: {}
 
   i: ->
+
+    if location.hostname is 'www.goldpr.com' and location.protocol isnt 'https:'
+      if location.hash isnt ""
+        location = 'https://www.goldpr.com/' + location.hash
+      else
+        location = 'https://www.goldpr.com/'
+
+    if location.hostname is 'goldpr.com'
+      if location.hash isnt ""
+        location = 'https://www.goldpr.com/' + location.hash
+      else
+        location = 'https://www.goldpr.com/'
     
 
     Index.cache.window = $(window)
