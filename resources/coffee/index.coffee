@@ -10,17 +10,17 @@ Index =
 
   i: ->
 
-    if location.hostname is 'www.goldpr.com' and location.protocol isnt 'https:'
-      if location.hash isnt ""
-        location = 'https://www.goldpr.com/' + location.hash
+    if document.location.hostname is 'www.goldpr.com' and document.location.protocol isnt 'https:'
+      if document.location.hash isnt ""
+        document.location = 'https://www.goldpr.com/' + document.location.hash
       else
-        location = 'https://www.goldpr.com/'
+        document.location = 'https://www.goldpr.com/'
 
-    if location.hostname is 'goldpr.com'
-      if location.hash isnt ""
-        location = 'https://www.goldpr.com/' + location.hash
+    if document.location.hostname is 'goldpr.com'
+      if document.location.hash isnt ""
+        document.location = 'https://www.goldpr.com/' + document.location.hash
       else
-        location = 'https://www.goldpr.com/'
+        document.location = 'https://www.goldpr.com/'
     
 
     Index.cache.window = $(window)
