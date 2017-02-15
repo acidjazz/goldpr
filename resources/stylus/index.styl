@@ -532,6 +532,10 @@ for num in 1..3
       padding 20px 0 0 0
       margin 20px 
       text-decoration none
+      animation cellOutY 0.2s 0.2s ease-in both
+      for num in 1..6
+        &:nth-child({num})
+          animation-delay unit(num*0.1, 's')
       > .image
         text-align center
         width 100%
