@@ -39,6 +39,10 @@ Index =
     Index.handlers()
     console.log 'Index.i()'
 
+    if document.location.hash isnt ''
+      $('html, body').scrollTo "#{document.location.hash}",
+        duration: 50
+        offset: -60
 
   visible: ->
     if Index.vis isnt document.visibilityState
