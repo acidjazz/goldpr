@@ -2,18 +2,18 @@ extends ../extend/layout
 
 block content
   .section.section_blog(data-section='blog')
-    .entries
-      each val in [1,2,3,4,5,6]
-        a.entry(href='/entry')
-          .image(style='background-image: url(/images/blog/entry.jpg)')
+    .entries.basal-loop(basal-structure='blog')
+      a.entry.basal-link(basal-link='/blog/article/#')
+        .image(basal-name='image',basal-type='css-background')
+        .title(basal-name='title')
+        .description(basal-name='description')
+    .clear
 
-          .title GOLD PR WINS NATIONAL AWARD
-          .description Gold PR, a Southern California public relations agency, was awarded the PR News “Agency Elite” award...
-      .clear
-
-    .pages
+    //-.pages
       a.page.next(href='/blog/')
         .arrow
           include ../../vector/arrow.svg
         .pcopy Load More
 
+    script.
+      Blog.i()

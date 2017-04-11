@@ -45,6 +45,7 @@ gulp.task 'vendor', ->
 
   gulp.src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/moment/min/moment.min.js',
     'node_modules/jquery.scrollto/jquery.scrollTo.js',
   ])
 
