@@ -31,10 +31,7 @@ doctype
 html(lang='en')
   head
     block meta
-    if meta
-      title #{meta.title}
-    else
-      title #{config.meta.title}
+      include meta
 
     meta(http-equiv="X-UA-Compatible",content="IE=Edge,chrome=1")
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
@@ -71,14 +68,6 @@ html(lang='en')
     script(type='text/javascript', src='/javascript/vendor.js')
     script(type='text/javascript', src='/javascript/bundle.js')
 
-    //- google
-    if meta
-      meta(name='description',content=meta.description)
-    else
-      meta(name='description',content=config.meta.description)
-
-    meta(name='keywords',content=config.meta.keywords)
-
     script(type='application/ld+json').
       {
         "@context": "http://schema.org",
@@ -94,8 +83,6 @@ html(lang='en')
         ]
       }
 
-    block meta
-      include meta
 
     link(rel="apple-touch-icon",sizes="57x57",href="/ico/apple-touch-icon-57x57.png")
     link(rel="apple-touch-icon",sizes="60x60",href="/ico/apple-touch-icon-60x60.png")

@@ -1,0 +1,25 @@
+extends ../../../extend/layout
+
+block meta
+  title=entry.entities.title.value
+  meta(name='description',content=entry.entities.description.value)
+  meta(property='og:url',content=config.meta.url + "article/" + entry.name + "/")
+  meta(property='og:title',content=entry.entities.title.value)
+  meta(property='og:image',content=entry.entities.image.value)
+  meta(property='og:description',content=entry.entities.description.value)
+
+  meta(name='twitter:title',content=entry.entities.title.value)
+  meta(name='twitter:description',content=entry.entities.description.value)
+  meta(name='twitter:image',content=entry.entities.image.value) 
+
+block content
+  .section.section_article(data-section='article')
+    .hero.basal-entry(style='background-image: url(' + entry.entities.image.value + ')')
+    .xing
+      include ../../../../vector/divider1.svg
+    .title.basal-entry(basal-entity='title')=entry.entities.title.value
+    time.date.basal-entry(basal-date='created',title=entry.created_at)
+    .blog.basal-entry(basal-entity='blog') !{entry.entities.blog.value}
+
+  script.
+    Article.i()

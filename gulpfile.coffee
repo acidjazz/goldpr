@@ -14,8 +14,10 @@ stylus       = require 'gulp-stylus'
 pug          = require 'gulp-pug'
 sourcemaps   = require 'gulp-sourcemaps'
 gulpif       = require 'gulp-if'
-fs           = require 'fs'
+fs           = require 'fs-extra'
 objectus     = require 'objectus'
+
+axios        = require 'axios'
 
 env = 'dev'
 
@@ -26,13 +28,20 @@ dirs =
   svg:    'resources/vector'
 
 config = {}
+
 objectify = (complete) ->
   objectus 'config/', (error, result) ->
     notify error if error
     config = result
-    fs.writeFileSync(dirs.coffee + '/config.coffee', "config = " + JSON.stringify(config) + ";", 'utf8')
-    complete?()
- 
+
+    axios.get('https://basal.tech/api/structures/?client=' + config.basal.client)
+      .then (response) ->
+        config.blog = response.data.data[0]
+        fs.writeFileSync(dirs.coffee + '/config.coffee', "config = " + JSON.stringify(config) + ";", 'utf8')
+        #complete?()
+        console.log 'fetching config'
+      .catch (error) ->
+        console.log error
 
 objectify()
 
@@ -76,7 +85,7 @@ gulp.task 'coffee', ->
     .pipe(sync.stream())
 
 gulp.task 'stylus', ->
-  objectify ->
+  #objectify ->
     gulp.src(dirs.stylus + '/main.styl')
       .pipe(gulpif(env == 'dev',sourcemaps.init(loadMaps: true)))
       .pipe(stylus(rawDefine: config: config)
@@ -91,7 +100,7 @@ gulp.task 'stylus', ->
       .pipe(sync.stream())
 
 gulp.task 'pug', ->
-  objectify ->
+  #objectify ->
     gulp.src(dirs.pug + '/**/index.pug')
       .pipe(pug(
         pretty: true
@@ -107,6 +116,42 @@ gulp.task 'pug', ->
       )))
       .pipe(gulp.dest('public'))
       .pipe sync.stream()
+
+    #for entry in config.blog.entries
+    config.blog.entries.forEach (entry) ->
+
+      dir = dirs.pug + '/blog/article/' + entry.name + '/'
+
+      if (!fs.existsSync(dir))
+        fs.mkdirSync dir
+        try
+          fs.copySync(dirs.pug + '/blog/article/template.pug', dir + 'article.pug')
+          console.log 'copy success'
+        catch e then console.log e
+
+      gulp.src(dir + 'article.pug')
+        .pipe(pug(
+          pretty: true
+          locals:
+            config: config
+            entry: entry
+            name: entry.name
+        ).on('error', notify.onError((error) ->
+          title: 'Pug error: ' + error.name
+          message: error.message
+          sound: 'Pop')))
+        .pipe(gulpif(env != 'dev',htmlmin(
+          collapseWhitespace: true
+          processScripts: ['application/ld+json', 'text/javascript']
+        )))
+        .pipe(gulp.dest('public/blog/article/' + entry.name + '/'))
+        .pipe sync.stream()
+
+        fs.removeSync('public/blog/article/' + entry.name + '/index.html')
+        fs.moveSync(
+          'public/blog/article/' + entry.name + '/article.html',
+          'public/blog/article/' + entry.name + '/index.html'
+        )
 
 watch = ->
   gulp.watch 'config/**/*', ['objectus','pug','stylus']

@@ -1,3 +1,17 @@
+
+if meta
+  title #{meta.title}
+else
+  title #{config.meta.title}
+
+//- google
+if meta
+  meta(name='description',content=meta.description)
+else
+  meta(name='description',content=config.meta.description)
+
+meta(name='keywords',content=config.meta.keywords)
+
 //- facebook
 if meta
   meta(property='og:url',content=meta.url)

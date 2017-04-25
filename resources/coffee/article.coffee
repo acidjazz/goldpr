@@ -6,6 +6,11 @@ Article =
 
     @name = window.location.hash.replace('#', '')
 
+    $('time').each (i, el) =>
+      jel = $ el
+      jel.html moment(jel.attr('title')).format('MMMM Do YYYY')
+      jel.attr 'aria-label', moment(jel.attr('title')).calendar()
+    ###
     $('.basal-entry').attr('basal-name', @name)
     $('.basal-entry').attr('basal-structure', 'blog')
 
@@ -39,7 +44,6 @@ Article =
               .append($("<meta name='twitter:description' content='#{description}' />"))
               .append($("<meta name='twitter:image' content='#{image}' />"));
 
-            ###
             $('meta[property="og:url"]').attr 'content', 'https://www.goldpr.com/article/#' + Article.name
             $('meta[property="og:title"]').attr 'content', title
             $('meta[property="og:description"]').attr 'content', description
