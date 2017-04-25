@@ -28,6 +28,7 @@ Article =
             $('meta[name=description]').attr 'content', description
 
             $('head')
+              .append($("<meta property='fb:app_id' content='#{config.meta.fb_appid}' />"))
               .append($("<meta property='og:url' content='#{url}' />"))
               .append($("<meta property='og:title' content='#{title}' />"))
               .append($("<meta property='og:description' content='#{description}' />"))
