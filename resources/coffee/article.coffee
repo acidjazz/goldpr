@@ -37,6 +37,7 @@ Article =
               .append($("<meta name='twitter:title' content='#{title}' />"))
               .append($("<meta name='twitter:description' content='#{description}' />"))
               .append($("<meta name='twitter:image' content='#{image}' />"));
+
             ###
             $('meta[property="og:url"]').attr 'content', 'https://www.goldpr.com/article/#' + Article.name
             $('meta[property="og:title"]').attr 'content', title
