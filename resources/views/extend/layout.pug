@@ -94,33 +94,8 @@ html(lang='en')
         ]
       }
 
-    //- facebook
-    if meta
-      meta(property='og:url',content=meta.url)
-      meta(property='og:title',content=meta.title)
-      meta(property='og:image',content=meta.image)
-      meta(property='og:description',content=meta.description)
-    else
-      meta(property='og:url',content=config.meta.url)
-      meta(property='og:title',content=config.meta.title)
-      meta(property='og:image',content=config.meta.url + config.meta.image)
-      meta(property='og:description',content=config.meta.description)
-
-    meta(property='og:type',content='website')
-
-    //- twitter
-    meta(name='twitter:card',content='summary')
-
-    if meta
-      meta(name='twitter:title',content=meta.title)
-      meta(name='twitter:description',content=meta.description)
-      meta(name='twitter:image',content=config.meta.url + config.meta.image) 
-    else
-      meta(name='twitter:title',content=config.meta.title)
-      meta(name='twitter:description',content=config.meta.description)
-      meta(name='twitter:image',content=config.meta.url + 'images/share.jpg') 
-
-
+    block meta
+      include meta
 
     link(rel="apple-touch-icon",sizes="57x57",href="/ico/apple-touch-icon-57x57.png")
     link(rel="apple-touch-icon",sizes="60x60",href="/ico/apple-touch-icon-60x60.png")
