@@ -122,7 +122,8 @@ html(lang='en')
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
-    include ../partial/header
+    block header
+      include ../partial/header
     .container#container
       block content
     include ../partial/footer

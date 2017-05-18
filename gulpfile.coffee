@@ -100,7 +100,7 @@ gulp.task 'stylus', ->
       .pipe(sync.stream())
 
 gulp.task 'pug', ->
-  #objectify ->
+  objectify ->
     gulp.src(dirs.pug + '/**/index.pug')
       .pipe(pug(
         pretty: true

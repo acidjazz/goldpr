@@ -12,6 +12,13 @@ block meta
   meta(name='twitter:description',content=entry.entities.description.value)
   meta(name='twitter:image',content=entry.entities.image.value) 
 
+block header
+  header#home
+    .inner
+      .logo
+        include ../../vector/goldpr.svg
+  .clear
+
 block content
   .section.section_article(data-section='article')
     .hero.basal-entry(style='background-image: url(' + entry.entities.image.value + ')')

@@ -1,5 +1,13 @@
 extends ../extend/layout
 
+block header
+  header#home
+    .inner
+      .logo
+        include ../../vector/goldpr.svg
+  .clear
+
+
 block content
   .section.section_blog(data-section='blog')
     .entries.basal-loop(basal-structure='blog')
@@ -16,4 +24,5 @@ block content
         .pcopy Load More
 
     script.
+      $('.menu').text('')
       Blog.i()
